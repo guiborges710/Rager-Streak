@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login Screen View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginScreenViewController" customModule="Rager_Streak" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8E-Yu-cqf">
+                                <rect key="frame" x="135" y="726" width="144" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="udA-MP-2wQ"/>
+                                </constraints>
+                                <state key="normal" title="ENTRAR">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JL5-iy-YOn"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UYK-LK-B7s">
+                                <rect key="frame" x="30" y="423" width="354" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7Hd-RI-6Jw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digite a palavra-chave aqui:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxl-9t-Lns">
+                                <rect key="frame" x="101" y="363" width="212" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5KM-Md-WJt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p8E-Yu-cqf" secondAttribute="trailing" constant="135" id="D0g-ie-V4Z"/>
+                            <constraint firstItem="p8E-Yu-cqf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PAy-eR-QmA"/>
+                            <constraint firstItem="UYK-LK-B7s" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Q2w-a9-Jnc"/>
+                            <constraint firstItem="UYK-LK-B7s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X9V-MD-sk6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="p8E-Yu-cqf" secondAttribute="bottom" constant="94" id="aJp-vM-hEs"/>
+                            <constraint firstItem="p8E-Yu-cqf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ezP-uy-q3g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UYK-LK-B7s" secondAttribute="trailing" constant="30" id="h06-wY-YKi"/>
+                            <constraint firstItem="UYK-LK-B7s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="nDT-4B-ooV"/>
+                            <constraint firstItem="p8E-Yu-cqf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="135" id="rfp-s7-ciy"/>
+                            <constraint firstItem="Qxl-9t-Lns" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="stu-qd-OhF"/>
+                            <constraint firstItem="UYK-LK-B7s" firstAttribute="top" secondItem="Qxl-9t-Lns" secondAttribute="bottom" constant="30" id="uQ5-gc-y5q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="message" destination="Qxl-9t-Lns" id="Tlo-cQ-Hcr"/>
+                        <outlet property="password" destination="UYK-LK-B7s" id="Rjl-u3-5qg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="132.58928571428572"/>
+        </scene>
+    </scenes>
+</document>
