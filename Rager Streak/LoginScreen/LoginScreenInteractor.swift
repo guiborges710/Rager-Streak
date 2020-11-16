@@ -23,11 +23,7 @@ class LoginScreenInteractor: LoginScreenBusinessLogic {
 
     // MARK: Do something
     func confirmPassword(string: String?) {
-        if string == "Gui" {
-            presenter?.passwordCorrect()
-        } else {
-            presenter?.passwordIncorrect()
-        }
+        string == "Gui" ? presenter?.passwordCorrect() : presenter?.passwordIncorrect()
     }
   
 }
