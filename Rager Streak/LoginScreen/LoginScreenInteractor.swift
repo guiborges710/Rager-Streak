@@ -17,13 +17,21 @@ protocol LoginScreenBusinessLogic
     func confirmPassword(string: String?)
 }
 
-class LoginScreenInteractor: LoginScreenBusinessLogic {
+protocol LoginScreenDataStore {
+     var user: LoginScreen.Model.User? { get set }
+}
+
+class LoginScreenInteractor: LoginScreenBusinessLogic, LoginScreenDataStore {
     
+    var user: LoginScreen.Model.User?
     var presenter: LoginScreenPresentationLogic?
 
     // MARK: Do something
     func confirmPassword(string: String?) {
+        let guilherme = LoginScreen.Model.User(nome: "Os dados foram passados com MUITO sucesso!")
+        user = guilherme
         string == "Gui" ? presenter?.passwordCorrect() : presenter?.passwordIncorrect()
+        
     }
   
 }

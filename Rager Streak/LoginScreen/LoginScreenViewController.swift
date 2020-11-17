@@ -13,7 +13,9 @@
 import UIKit
 
 protocol LoginScreenDisplayLogic: class {
-    func changeText(textFieldViewModel: LoginScreen.Model.LabelViewModel)
+    func routeToSecondScreen()
+    func passwordCorrect()
+    func passwordIncorrect(textFieldViewModel: LoginScreen.Model.LabelViewModel)
 }
 
 class LoginScreenViewController: UIViewController, LoginScreenDisplayLogic {
@@ -21,6 +23,7 @@ class LoginScreenViewController: UIViewController, LoginScreenDisplayLogic {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var message: UILabel!
     var interactor: LoginScreenBusinessLogic?
+    var router: (NSObjectProtocol & LoginScreenRoutingLogic & LoginScreenDataPassing)?
     
     // MARK: Object lifecycle
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -38,21 +41,45 @@ class LoginScreenViewController: UIViewController, LoginScreenDisplayLogic {
         let viewController = self
         let interactor = LoginScreenInteractor()
         let presenter = LoginScreenPresenter()
-        
+        let router = LoginScreenRouter()
         viewController.interactor = interactor
+        viewController.router = router
         interactor.presenter = presenter
         presenter.viewController = viewController
+        router.viewController = viewController
+        router.dataStore = interactor
         
     }
-    
+    // MARK: Routing
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+      if let scene = segue.identifier {
+        let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
+        if let router = router, router.responds(to: selector) {
+          router.perform(selector, with: segue)
+        }
+      }
+    }
     // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        password.text = "Gui"
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
     // MARK: Do something
-    func changeText(textFieldViewModel: LoginScreen.Model.LabelViewModel) {
+    func routeToSecondScreen() {
+        router?.routeToSuccess()
+    }
+    
+    func passwordCorrect() {
+        routeToSecondScreen()
+    }
+    
+    func passwordIncorrect(textFieldViewModel: LoginScreen.Model.LabelViewModel) {
         message.changeText(string: textFieldViewModel.textMessage,
                            color: textFieldViewModel.colorMessage)
     }

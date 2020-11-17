@@ -22,13 +22,12 @@ class LoginScreenPresenter: LoginScreenPresentationLogic {
   weak var viewController: LoginScreenDisplayLogic?
     
   func passwordCorrect() {
-    let viewModel = LoginScreen.Model.LabelViewModel(textMessage: "A palavra-chave está correta!", colorMessage: .green)
-    viewController?.changeText(textFieldViewModel: viewModel)
+    viewController?.passwordCorrect()
   }
   
   func passwordIncorrect() {
       let viewModel = LoginScreen.Model.LabelViewModel(textMessage: "A palavra-chave está incorreta!", colorMessage: .red)
-      viewController?.changeText(textFieldViewModel: viewModel)
+      viewController?.passwordIncorrect(textFieldViewModel: viewModel)
   }
   
 }

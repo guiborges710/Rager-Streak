@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Second Screen View Controller-->
+        <scene sceneID="oPl-SD-Kl6">
+            <objects>
+                <viewController storyboardIdentifier="SecondScreenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gDO-US-mTq" customClass="SecondScreenViewController" customModule="Rager_Streak" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VWK-Gl-X0M">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEX-ed-Ryd">
+                                <rect key="frame" x="189" y="437.5" width="36.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="YEX-ed-Ryd" firstAttribute="centerX" secondItem="VWK-Gl-X0M" secondAttribute="centerX" id="4cY-Md-kfW"/>
+                            <constraint firstItem="YEX-ed-Ryd" firstAttribute="centerY" secondItem="VWK-Gl-X0M" secondAttribute="centerY" id="7wL-9z-F8V"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Dx4-LB-G7k"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="YEX-ed-Ryd" id="eDz-KC-ihL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tih-be-xlM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-9" y="156"/>
+        </scene>
+    </scenes>
+</document>
