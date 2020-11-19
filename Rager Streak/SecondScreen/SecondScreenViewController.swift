@@ -55,17 +55,8 @@ class SecondScreenViewController: UIViewController, SecondScreenDisplayLogic {
     
     func setupButtonAndInput(viewModelButton: LoginScreen.Model.RSButton,
                              viewModelInput: LoginScreen.Model.RSInput) {
-        inputUser.backgroundColor = viewModelInput.backgroundColor
-        inputUser.layer.borderWidth = viewModelInput.borderWidth
-        inputUser.layer.borderColor = viewModelInput.borderColor
-        inputUser.layer.cornerRadius = 2
-        inputPassword.backgroundColor = viewModelInput.backgroundColor
-        inputPassword.layer.borderWidth = viewModelInput.borderWidth
-        inputPassword.layer.borderColor = viewModelInput.borderColor
-        inputPassword.layer.cornerRadius = 2
         buttonLogin.layer.borderWidth = viewModelButton.borderWidth
         buttonLogin.layer.borderColor = viewModelButton.borderColor
-        
     }
     
     // MARK: View lifecycle

@@ -1,0 +1,6 @@
+framework module Pods_Rager_Streak {
+  umbrella header "Pods-Rager Streak-umbrella.h"
+
+  export *
+  module * { export * }
+}

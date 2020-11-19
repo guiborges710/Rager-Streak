@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		089A42E1D7C1E92A7AA8C049 /* Pods_Rager_StreakTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F41657E45D61CD56D97C5C6 /* Pods_Rager_StreakTests.framework */; };
+		38F03732EC4E68F0DAE9E1CA /* Pods_Rager_Streak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E71E934D23872EAB5ACED6D /* Pods_Rager_Streak.framework */; };
+		490393AC6816B2CFAAB4731B /* Pods_Rager_Streak_Rager_StreakUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE67317903D9FA5E71550CDA /* Pods_Rager_Streak_Rager_StreakUITests.framework */; };
 		6D0AD9E925598F6700A6C3A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0AD9E825598F6700A6C3A6 /* AppDelegate.swift */; };
 		6D0AD9EB25598F6700A6C3A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0AD9EA25598F6700A6C3A6 /* SceneDelegate.swift */; };
 		6D0AD9F025598F6700A6C3A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D0AD9EE25598F6700A6C3A6 /* Main.storyboard */; };
@@ -48,6 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11B6545E753BFDC152D9B7C2 /* Pods-Rager Streak-Rager StreakUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rager Streak-Rager StreakUITests.release.xcconfig"; path = "Target Support Files/Pods-Rager Streak-Rager StreakUITests/Pods-Rager Streak-Rager StreakUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2D59F1CD2A128987A7D4FDB7 /* Pods-Rager StreakTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rager StreakTests.release.xcconfig"; path = "Target Support Files/Pods-Rager StreakTests/Pods-Rager StreakTests.release.xcconfig"; sourceTree = "<group>"; };
+		4F1EE8553246B57FA860A7AA /* Pods-Rager Streak-Rager StreakUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rager Streak-Rager StreakUITests.debug.xcconfig"; path = "Target Support Files/Pods-Rager Streak-Rager StreakUITests/Pods-Rager Streak-Rager StreakUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5605B90FF3B9E0C821F8B1E1 /* Pods-Rager Streak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rager Streak.release.xcconfig"; path = "Target Support Files/Pods-Rager Streak/Pods-Rager Streak.release.xcconfig"; sourceTree = "<group>"; };
 		6D0AD9E525598F6700A6C3A6 /* Rager Streak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rager Streak.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D0AD9E825598F6700A6C3A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D0AD9EA25598F6700A6C3A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +82,11 @@
 		6D8CD62A256313BA008BB608 /* SecondScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenRouter.swift; sourceTree = "<group>"; };
 		6DEF99FA2566DB6600548A97 /* RSTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSTextField.swift; sourceTree = "<group>"; };
 		6DEF99FC2566DD2A00548A97 /* Empty.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Empty.xib; sourceTree = "<group>"; };
+		6E71E934D23872EAB5ACED6D /* Pods_Rager_Streak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rager_Streak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F41657E45D61CD56D97C5C6 /* Pods_Rager_StreakTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rager_StreakTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5E4A0372AC8FF65EC29A599 /* Pods-Rager Streak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rager Streak.debug.xcconfig"; path = "Target Support Files/Pods-Rager Streak/Pods-Rager Streak.debug.xcconfig"; sourceTree = "<group>"; };
+		EE67317903D9FA5E71550CDA /* Pods_Rager_Streak_Rager_StreakUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rager_Streak_Rager_StreakUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC827A8239961AC191B00A8A /* Pods-Rager StreakTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rager StreakTests.debug.xcconfig"; path = "Target Support Files/Pods-Rager StreakTests/Pods-Rager StreakTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38F03732EC4E68F0DAE9E1CA /* Pods_Rager_Streak.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				089A42E1D7C1E92A7AA8C049 /* Pods_Rager_StreakTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,12 +110,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				490393AC6816B2CFAAB4731B /* Pods_Rager_Streak_Rager_StreakUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15F119110307694021A2EDFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E71E934D23872EAB5ACED6D /* Pods_Rager_Streak.framework */,
+				EE67317903D9FA5E71550CDA /* Pods_Rager_Streak_Rager_StreakUITests.framework */,
+				7F41657E45D61CD56D97C5C6 /* Pods_Rager_StreakTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6D0AD9DC25598F6700A6C3A6 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +134,8 @@
 				6D0AD9FE25598F6A00A6C3A6 /* Rager StreakTests */,
 				6D0ADA0925598F6A00A6C3A6 /* Rager StreakUITests */,
 				6D0AD9E625598F6700A6C3A6 /* Products */,
+				785A2CCCA2506760B8B05038 /* Pods */,
+				15F119110307694021A2EDFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,6 +226,20 @@
 			path = SecondScreen;
 			sourceTree = "<group>";
 		};
+		785A2CCCA2506760B8B05038 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D5E4A0372AC8FF65EC29A599 /* Pods-Rager Streak.debug.xcconfig */,
+				5605B90FF3B9E0C821F8B1E1 /* Pods-Rager Streak.release.xcconfig */,
+				4F1EE8553246B57FA860A7AA /* Pods-Rager Streak-Rager StreakUITests.debug.xcconfig */,
+				11B6545E753BFDC152D9B7C2 /* Pods-Rager Streak-Rager StreakUITests.release.xcconfig */,
+				FC827A8239961AC191B00A8A /* Pods-Rager StreakTests.debug.xcconfig */,
+				2D59F1CD2A128987A7D4FDB7 /* Pods-Rager StreakTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -206,6 +247,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6D0ADA0F25598F6A00A6C3A6 /* Build configuration list for PBXNativeTarget "Rager Streak" */;
 			buildPhases = (
+				E045E5E00474E73C16CCB217 /* [CP] Check Pods Manifest.lock */,
 				6D0AD9E125598F6700A6C3A6 /* Sources */,
 				6D0AD9E225598F6700A6C3A6 /* Frameworks */,
 				6D0AD9E325598F6700A6C3A6 /* Resources */,
@@ -223,6 +265,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6D0ADA1225598F6A00A6C3A6 /* Build configuration list for PBXNativeTarget "Rager StreakTests" */;
 			buildPhases = (
+				06B554A72361818FF3EA7D43 /* [CP] Check Pods Manifest.lock */,
 				6D0AD9F725598F6A00A6C3A6 /* Sources */,
 				6D0AD9F825598F6A00A6C3A6 /* Frameworks */,
 				6D0AD9F925598F6A00A6C3A6 /* Resources */,
@@ -241,6 +284,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6D0ADA1525598F6A00A6C3A6 /* Build configuration list for PBXNativeTarget "Rager StreakUITests" */;
 			buildPhases = (
+				799459B16C97524C2DF41836 /* [CP] Check Pods Manifest.lock */,
 				6D0ADA0225598F6A00A6C3A6 /* Sources */,
 				6D0ADA0325598F6A00A6C3A6 /* Frameworks */,
 				6D0ADA0425598F6A00A6C3A6 /* Resources */,
@@ -326,6 +370,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06B554A72361818FF3EA7D43 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rager StreakTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		799459B16C97524C2DF41836 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rager Streak-Rager StreakUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E045E5E00474E73C16CCB217 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rager Streak-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6D0AD9E125598F6700A6C3A6 /* Sources */ = {
@@ -516,6 +629,7 @@
 		};
 		6D0ADA1025598F6A00A6C3A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5E4A0372AC8FF65EC29A599 /* Pods-Rager Streak.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -534,6 +648,7 @@
 		};
 		6D0ADA1125598F6A00A6C3A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5605B90FF3B9E0C821F8B1E1 /* Pods-Rager Streak.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -552,6 +667,7 @@
 		};
 		6D0ADA1325598F6A00A6C3A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC827A8239961AC191B00A8A /* Pods-Rager StreakTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -573,6 +689,7 @@
 		};
 		6D0ADA1425598F6A00A6C3A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D59F1CD2A128987A7D4FDB7 /* Pods-Rager StreakTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -594,6 +711,7 @@
 		};
 		6D0ADA1625598F6A00A6C3A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F1EE8553246B57FA860A7AA /* Pods-Rager Streak-Rager StreakUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -613,6 +731,7 @@
 		};
 		6D0ADA1725598F6A00A6C3A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11B6545E753BFDC152D9B7C2 /* Pods-Rager Streak-Rager StreakUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
