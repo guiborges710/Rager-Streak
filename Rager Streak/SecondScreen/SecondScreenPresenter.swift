@@ -14,17 +14,23 @@ import UIKit
 
 protocol SecondScreenPresentationLogic
 {
-    func changeLabel(string: String)
+    func setupButtonAndInputs()
 }
 
 class SecondScreenPresenter: SecondScreenPresentationLogic
 {
-    func changeLabel(string: String) {
-        viewController?.changeLabel(string: string)
+    
+    weak var viewController: SecondScreenDisplayLogic?
+    // MARK: Do something
+    func setupButtonAndInputs() {
+        let color = UIColor(hexString: "7A4DDF").cgColor
+        let backgroundColor = UIColor(hexString: "131313")
+        let viewModelButton = LoginScreen.Model.RSButton(borderColor: color, borderWidth: 1)
+        let viewModelInput = LoginScreen.Model.RSInput(backgroundColor: backgroundColor,
+                                                       borderColor: color,
+                                                       borderWidth: 1)
+        viewController?.setupButtonAndInput(viewModelButton: viewModelButton,
+                                            viewModelInput: viewModelInput)
     }
     
-  weak var viewController: SecondScreenDisplayLogic?
-  
-  // MARK: Do something
-
 }

@@ -22,7 +22,7 @@ class LoginScreenPresenter: LoginScreenPresentationLogic {
     
     func setupButton() {
         let color = UIColor(hexString: "7A4DDF").cgColor
-        let viewModel = LoginScreen.Model.RSButton(borderColor: color, borderWidth: 2)
+        let viewModel = LoginScreen.Model.RSButton(borderColor: color, borderWidth: 1)
         viewController?.setupButton(buttonViewModel: viewModel)
     }
   

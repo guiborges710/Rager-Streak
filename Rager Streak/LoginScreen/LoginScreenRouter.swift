@@ -32,7 +32,7 @@ class LoginScreenRouter: NSObject, LoginScreenRoutingLogic, LoginScreenDataPassi
 
         var destinationDS = destination.router?.dataStore
         passData(dataSource: dataStore, destination: &destinationDS)
-        viewController?.navigationController?.pushViewController(destination, animated: false)
+        viewController?.navigationController?.pushViewController(destination, animated: true)
     }
     
     private func passData(dataSource: LoginScreenDataStore?,

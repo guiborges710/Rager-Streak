@@ -23,6 +23,12 @@ enum LoginScreen {
             let borderColor: CGColor
             let borderWidth: CGFloat
         }
+        
+        struct RSInput {
+            let backgroundColor: UIColor
+            let borderColor: CGColor
+            let borderWidth: CGFloat
+        }
     }
 
 }

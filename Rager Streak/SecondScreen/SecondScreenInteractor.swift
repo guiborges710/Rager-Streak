@@ -14,7 +14,7 @@ import UIKit
 
 protocol SecondScreenBusinessLogic
 {
-    func applyTextOnLabel()
+    func setupButtonAndInputs()
 }
 
 protocol SecondScreenDataStore
@@ -29,11 +29,9 @@ class SecondScreenInteractor: SecondScreenBusinessLogic, SecondScreenDataStore
     
     var presenter: SecondScreenPresentationLogic?
     
-    func applyTextOnLabel() {
-        
-        if let usuario = user {
-            presenter?.changeLabel(string: usuario.nome)
-        }
+    // MARK: Do something
+    func setupButtonAndInputs() {
+        presenter?.setupButtonAndInputs()
     }
     
 }

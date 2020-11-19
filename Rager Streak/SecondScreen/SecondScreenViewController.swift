@@ -13,18 +13,19 @@
 import UIKit
 
 protocol SecondScreenDisplayLogic: class {
-    func changeLabel(string: String)
+    func setupButtonAndInput(viewModelButton: LoginScreen.Model.RSButton, viewModelInput: LoginScreen.Model.RSInput)
 }
 
 class SecondScreenViewController: UIViewController, SecondScreenDisplayLogic {
     
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var inputUser: RSTextField!
+    @IBOutlet weak var inputPassword: UITextField!
+    @IBOutlet weak var buttonLogin: UIButton!
     
     var interactor: SecondScreenBusinessLogic?
     var router: (NSObjectProtocol & SecondScreenRoutingLogic & SecondScreenDataPassing)?
     
     // MARK: Object lifecycle
-    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
     {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -35,11 +36,9 @@ class SecondScreenViewController: UIViewController, SecondScreenDisplayLogic {
     {
         super.init(coder: aDecoder)
         setup()
-        
     }
     
     // MARK: Setup
-    
     private func setup()
     {
         let viewController = self
@@ -54,6 +53,37 @@ class SecondScreenViewController: UIViewController, SecondScreenDisplayLogic {
         router.dataStore = interactor
     }
     
+    func setupButtonAndInput(viewModelButton: LoginScreen.Model.RSButton,
+                             viewModelInput: LoginScreen.Model.RSInput) {
+        inputUser.backgroundColor = viewModelInput.backgroundColor
+        inputUser.layer.borderWidth = viewModelInput.borderWidth
+        inputUser.layer.borderColor = viewModelInput.borderColor
+        inputUser.layer.cornerRadius = 2
+        inputPassword.backgroundColor = viewModelInput.backgroundColor
+        inputPassword.layer.borderWidth = viewModelInput.borderWidth
+        inputPassword.layer.borderColor = viewModelInput.borderColor
+        inputPassword.layer.cornerRadius = 2
+        buttonLogin.layer.borderWidth = viewModelButton.borderWidth
+        buttonLogin.layer.borderColor = viewModelButton.borderColor
+        
+    }
+    
+    // MARK: View lifecycle
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        //TODO: Criar um componente para navbar
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        view.backgroundColor = UIColor(hexString: "131313")
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.barTintColor = .clear
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.layoutIfNeeded()
+        interactor?.setupButtonAndInputs()
+    }
+
+    
     // MARK: Routing
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -64,18 +94,5 @@ class SecondScreenViewController: UIViewController, SecondScreenDisplayLogic {
                 router.perform(selector, with: segue)
             }
         }
-    }
-    
-    // MARK: View lifecycle
-    
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
-        interactor?.applyTextOnLabel()
-    }
-    
-    func changeLabel(string: String) {
-        label.text = string
     }
 }
