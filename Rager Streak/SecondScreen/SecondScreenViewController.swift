@@ -78,8 +78,4 @@ class SecondScreenViewController: UIViewController, SecondScreenDisplayLogic {
     func changeLabel(string: String) {
         label.text = string
     }
-    // MARK: Do something
-    
-    //@IBOutlet weak var nameTextField: UITextField!
-    
 }

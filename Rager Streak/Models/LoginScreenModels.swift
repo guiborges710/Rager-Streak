@@ -18,6 +18,11 @@ enum LoginScreen {
             let textMessage: String
             let colorMessage: UIColor
         }
+        
+        struct RSButton {
+            let borderColor: CGColor
+            let borderWidth: CGFloat
+        }
     }
 
 }

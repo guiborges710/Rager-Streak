@@ -13,21 +13,17 @@
 import UIKit
 
 protocol LoginScreenPresentationLogic {
-    func passwordCorrect()
-    func passwordIncorrect()
+    func setupButton()
 }
 
 class LoginScreenPresenter: LoginScreenPresentationLogic {
     
   weak var viewController: LoginScreenDisplayLogic?
     
-  func passwordCorrect() {
-    viewController?.passwordCorrect()
-  }
-  
-  func passwordIncorrect() {
-      let viewModel = LoginScreen.Model.LabelViewModel(textMessage: "A palavra-chave está incorreta!", colorMessage: .red)
-      viewController?.passwordIncorrect(textFieldViewModel: viewModel)
-  }
+    func setupButton() {
+        let color = UIColor(hexString: "7A4DDF").cgColor
+        let viewModel = LoginScreen.Model.RSButton(borderColor: color, borderWidth: 2)
+        viewController?.setupButton(buttonViewModel: viewModel)
+    }
   
 }

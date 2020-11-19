@@ -14,7 +14,7 @@ import UIKit
 
 protocol LoginScreenBusinessLogic
 {
-    func confirmPassword(string: String?)
+    func setupButton()
 }
 
 protocol LoginScreenDataStore {
@@ -27,11 +27,8 @@ class LoginScreenInteractor: LoginScreenBusinessLogic, LoginScreenDataStore {
     var presenter: LoginScreenPresentationLogic?
 
     // MARK: Do something
-    func confirmPassword(string: String?) {
-        let guilherme = LoginScreen.Model.User(nome: "Os dados foram passados com MUITO sucesso!")
-        user = guilherme
-        string == "Gui" ? presenter?.passwordCorrect() : presenter?.passwordIncorrect()
-        
+    func setupButton() {
+        presenter?.setupButton()
     }
   
 }

@@ -14,13 +14,12 @@ import UIKit
 
 protocol LoginScreenDisplayLogic: class {
     func routeToSecondScreen()
-    func passwordCorrect()
-    func passwordIncorrect(textFieldViewModel: LoginScreen.Model.LabelViewModel)
+    func setupButton(buttonViewModel: LoginScreen.Model.RSButton)
 }
 
 class LoginScreenViewController: UIViewController, LoginScreenDisplayLogic {
     
-    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var buttonReady: UIButton!
     @IBOutlet weak var message: UILabel!
     var interactor: LoginScreenBusinessLogic?
     var router: (NSObjectProtocol & LoginScreenRoutingLogic & LoginScreenDataPassing)?
@@ -64,7 +63,8 @@ class LoginScreenViewController: UIViewController, LoginScreenDisplayLogic {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-        password.text = "Gui"
+        view.backgroundColor = UIColor(hexString: "131313")
+        interactor?.setupButton()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -75,8 +75,9 @@ class LoginScreenViewController: UIViewController, LoginScreenDisplayLogic {
         router?.routeToSuccess()
     }
     
-    func passwordCorrect() {
-        routeToSecondScreen()
+    func setupButton(buttonViewModel: LoginScreen.Model.RSButton) {
+        buttonReady.layer.borderColor = buttonViewModel.borderColor
+        buttonReady.layer.borderWidth = buttonViewModel.borderWidth
     }
     
     func passwordIncorrect(textFieldViewModel: LoginScreen.Model.LabelViewModel) {
@@ -85,6 +86,6 @@ class LoginScreenViewController: UIViewController, LoginScreenDisplayLogic {
     }
     
     @IBAction func confirmPassword(_ sender: Any) {
-        interactor?.confirmPassword(string: password.text)
+        routeToSecondScreen()
     }
 }
