@@ -25,9 +25,7 @@ enum LoginScreen {
         }
         
         struct RSInput {
-            let backgroundColor: UIColor
-            let borderColor: CGColor
-            let borderWidth: CGFloat
+            let attributedPlaceholder: NSAttributedString
         }
     }
 

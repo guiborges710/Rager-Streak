@@ -32,7 +32,6 @@ class RSTextField: UITextField, UITextFieldDelegate{
     }
 
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        clearButtonMode = .whileEditing
         movePlaceholderUp()
     }
     func textFieldDidEndEditing(_ textField: UITextField) {

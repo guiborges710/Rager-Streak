@@ -57,6 +57,8 @@ class SecondScreenViewController: UIViewController, SecondScreenDisplayLogic {
                              viewModelInput: LoginScreen.Model.RSInput) {
         buttonLogin.layer.borderWidth = viewModelButton.borderWidth
         buttonLogin.layer.borderColor = viewModelButton.borderColor
+        inputUser.attributedPlaceholder = viewModelInput.attributedPlaceholder
+        inputPassword.attributedPlaceholder = NSAttributedString(string: "Digite seu senha", attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray.withAlphaComponent(0.9)])
     }
     
     // MARK: View lifecycle
