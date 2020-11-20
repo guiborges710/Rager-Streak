@@ -60,8 +60,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="p8E-Yu-cqf" firstAttribute="top" secondItem="gfk-Ht-CXh" secondAttribute="bottom" constant="155" id="2es-qj-oAG"/>
-                            <constraint firstItem="gfk-Ht-CXh" firstAttribute="top" secondItem="Qxl-9t-Lns" secondAttribute="bottom" constant="84" id="BWz-F3-aGf"/>
+                            <constraint firstItem="p8E-Yu-cqf" firstAttribute="top" relation="lessThanOrEqual" secondItem="gfk-Ht-CXh" secondAttribute="bottom" constant="155" id="2es-qj-oAG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="p8E-Yu-cqf" secondAttribute="bottom" constant="74.5" id="BWn-4N-WDq"/>
+                            <constraint firstItem="gfk-Ht-CXh" firstAttribute="top" relation="lessThanOrEqual" secondItem="Qxl-9t-Lns" secondAttribute="bottom" constant="84" id="BWz-F3-aGf"/>
                             <constraint firstItem="gfk-Ht-CXh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DjK-v6-457"/>
                             <constraint firstItem="Qxl-9t-Lns" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JSg-bs-KSo"/>
                             <constraint firstItem="Qxl-9t-Lns" firstAttribute="top" secondItem="yo5-ug-7sV" secondAttribute="bottom" constant="23.800000000000001" id="N0j-QZ-iII"/>

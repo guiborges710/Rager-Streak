@@ -55,10 +55,11 @@ class FirstScreenViewController: UIViewController, FirstScreenDisplayLogic {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         view.backgroundColor = UIColor(hexString: "131313")
+        
         interactor?.setupButton()
     }
-    
     override func viewWillAppear(_ animated: Bool) {
+        
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     // MARK: Do something
