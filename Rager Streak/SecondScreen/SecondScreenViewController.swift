@@ -13,7 +13,7 @@
 import UIKit
 
 protocol SecondScreenDisplayLogic: class {
-    func setupButtonAndInput(viewModelButton: LoginScreen.Model.RSButton, viewModelInput: LoginScreen.Model.RSInput)
+    func setupButtonAndInput(viewModelButton: FirstScreen.Model.RSButton, viewModelInput: FirstScreen.Model.RSInput)
 }
 
 class SecondScreenViewController: UIViewController, SecondScreenDisplayLogic {
@@ -58,8 +58,8 @@ class SecondScreenViewController: UIViewController, SecondScreenDisplayLogic {
         router.dataStore = interactor
     }
     
-    func setupButtonAndInput(viewModelButton: LoginScreen.Model.RSButton,
-                             viewModelInput: LoginScreen.Model.RSInput) {
+    func setupButtonAndInput(viewModelButton: FirstScreen.Model.RSButton,
+                             viewModelInput: FirstScreen.Model.RSInput) {
         buttonLogin.layer.borderWidth = viewModelButton.borderWidth
         buttonLogin.layer.borderColor = viewModelButton.borderColor
         inputUser.attributedPlaceholder = viewModelInput.userPlaceHolder

@@ -1,5 +1,5 @@
 //
-//  LoginScreenInteractor.swift
+//  FirstScreenInteractor.swift
 //  Rager Streak
 //
 //  Created by guilherme.martinelli on 16/11/20.
@@ -12,19 +12,19 @@
 
 import UIKit
 
-protocol LoginScreenBusinessLogic
+protocol FirstScreenBusinessLogic
 {
     func setupButton()
 }
 
-protocol LoginScreenDataStore {
-     var user: LoginScreen.Model.User? { get set }
+protocol FirstScreenDataStore {
+     var user: FirstScreen.Model.User? { get set }
 }
 
-class LoginScreenInteractor: LoginScreenBusinessLogic, LoginScreenDataStore {
+class FirstScreenInteractor: FirstScreenBusinessLogic, FirstScreenDataStore {
     
-    var user: LoginScreen.Model.User?
-    var presenter: LoginScreenPresentationLogic?
+    var user: FirstScreen.Model.User?
+    var presenter: FirstScreenPresentationLogic?
 
     // MARK: Do something
     func setupButton() {

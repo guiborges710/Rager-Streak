@@ -25,11 +25,11 @@ class SecondScreenPresenter: SecondScreenPresentationLogic
     func setupButtonAndInputs() {
         //button
         let color = UIColor(hexString: "7A4DDF").cgColor
-        let viewModelButton = LoginScreen.Model.RSButton(borderColor: color, borderWidth: 1)
+        let viewModelButton = FirstScreen.Model.RSButton(borderColor: color, borderWidth: 1)
         //inputs
         let userPlaceHolder = createPlaceHolder(string: "Digite seu usuário", opacity: 0.9)
         let passwordPlaceHolder = createPlaceHolder(string: "Digite sua senha", opacity: 0.9)
-        let viewModelInput = LoginScreen.Model.RSInput(userPlaceHolder: userPlaceHolder,
+        let viewModelInput = FirstScreen.Model.RSInput(userPlaceHolder: userPlaceHolder,
                                                   passwordPlaceHolder: passwordPlaceHolder)
         viewController?.setupButtonAndInput(viewModelButton: viewModelButton,
                                             viewModelInput: viewModelInput)

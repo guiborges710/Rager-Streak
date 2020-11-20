@@ -1,5 +1,5 @@
 //
-//  LoginScreenPresenter.swift
+//  FirstScreenPresenter.swift
 //  Rager Streak
 //
 //  Created by guilherme.martinelli on 16/11/20.
@@ -12,17 +12,17 @@
 
 import UIKit
 
-protocol LoginScreenPresentationLogic {
+protocol FirstScreenPresentationLogic {
     func setupButton()
 }
 
-class LoginScreenPresenter: LoginScreenPresentationLogic {
+class FirstScreenPresenter: FirstScreenPresentationLogic {
     
-  weak var viewController: LoginScreenDisplayLogic?
+  weak var viewController: FirstScreenDisplayLogic?
     
     func setupButton() {
         let color = UIColor(hexString: "7A4DDF").cgColor
-        let viewModel = LoginScreen.Model.RSButton(borderColor: color, borderWidth: 1)
+        let viewModel = FirstScreen.Model.RSButton(borderColor: color, borderWidth: 1)
         viewController?.setupButton(buttonViewModel: viewModel)
     }
 }

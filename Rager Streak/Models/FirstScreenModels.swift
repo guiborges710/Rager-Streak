@@ -1,5 +1,5 @@
 //
-//  LoginScreenModels.swift
+//  FirstScreenModels.swift
 //  Rager Streak
 //
 //  Created by guilherme.martinelli on 16/11/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum LoginScreen {
+enum FirstScreen {
     enum Model {
         struct User {
             var nome: String

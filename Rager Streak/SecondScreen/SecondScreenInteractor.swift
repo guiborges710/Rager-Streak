@@ -19,13 +19,13 @@ protocol SecondScreenBusinessLogic
 
 protocol SecondScreenDataStore
 {
-    var user: LoginScreen.Model.User? { get set }
+    var user: FirstScreen.Model.User? { get set }
 }
 
 class SecondScreenInteractor: SecondScreenBusinessLogic, SecondScreenDataStore
 {
     
-    var user: LoginScreen.Model.User?
+    var user: FirstScreen.Model.User?
     
     var presenter: SecondScreenPresentationLogic?
     

@@ -1,5 +1,5 @@
 //
-//  LoginScreenViewController.swift
+//  FirstScreenViewController.swift
 //  Rager Streak
 //
 //  Created by guilherme.martinelli on 16/11/20.
@@ -12,17 +12,17 @@
 
 import UIKit
 
-protocol LoginScreenDisplayLogic: class {
+protocol FirstScreenDisplayLogic: class {
     func routeToSecondScreen()
-    func setupButton(buttonViewModel: LoginScreen.Model.RSButton)
+    func setupButton(buttonViewModel: FirstScreen.Model.RSButton)
 }
 
-class LoginScreenViewController: UIViewController, LoginScreenDisplayLogic {
+class FirstScreenViewController: UIViewController, FirstScreenDisplayLogic {
     
     @IBOutlet weak var buttonReady: UIButton!
     @IBOutlet weak var message: UILabel!
-    var interactor: LoginScreenBusinessLogic?
-    var router: (NSObjectProtocol & LoginScreenRoutingLogic & LoginScreenDataPassing)?
+    var interactor: FirstScreenBusinessLogic?
+    var router: (NSObjectProtocol & FirstScreenRoutingLogic & FirstScreenDataPassing)?
     
     // MARK: Object lifecycle
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -38,9 +38,9 @@ class LoginScreenViewController: UIViewController, LoginScreenDisplayLogic {
     // MARK: Setup
     private func setup() {
         let viewController = self
-        let interactor = LoginScreenInteractor()
-        let presenter = LoginScreenPresenter()
-        let router = LoginScreenRouter()
+        let interactor = FirstScreenInteractor()
+        let presenter = FirstScreenPresenter()
+        let router = FirstScreenRouter()
         viewController.interactor = interactor
         viewController.router = router
         interactor.presenter = presenter
@@ -66,12 +66,12 @@ class LoginScreenViewController: UIViewController, LoginScreenDisplayLogic {
         router?.routeToSuccess()
     }
     
-    func setupButton(buttonViewModel: LoginScreen.Model.RSButton) {
+    func setupButton(buttonViewModel: FirstScreen.Model.RSButton) {
         buttonReady.layer.borderColor = buttonViewModel.borderColor
         buttonReady.layer.borderWidth = buttonViewModel.borderWidth
     }
     
-    func passwordIncorrect(textFieldViewModel: LoginScreen.Model.LabelViewModel) {
+    func passwordIncorrect(textFieldViewModel: FirstScreen.Model.LabelViewModel) {
         message.changeText(string: textFieldViewModel.textMessage,
                            color: textFieldViewModel.colorMessage)
     }
