@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="2Me-Cn-zOS">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="b9b-tQ-IhN" customClass="HomeViewController" customModule="Rager_Streak" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C9x-bJ-wox">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="travis" translatesAutoresizingMaskIntoConstraints="NO" id="9BP-m0-GlP">
+                                <rect key="frame" x="107" y="175" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="fbo-My-u8P"/>
+                                    <constraint firstAttribute="width" constant="200" id="lle-yb-72T"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="46 PARTIDAS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4k-C9-7nd">
+                                <rect key="frame" x="140.5" y="435" width="133" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2l-CV-ZP3">
+                                <rect key="frame" x="186" y="510" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rsn-RS-jnh">
+                                <rect key="frame" x="167" y="614" width="80" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="46" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AE6-4F-9We">
+                                        <rect key="frame" x="26.5" y="27" width="27.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="0TD-UL-7Ag"/>
+                                    <constraint firstAttribute="width" constant="80" id="Hg1-Ux-GzJ"/>
+                                    <constraint firstItem="AE6-4F-9We" firstAttribute="centerX" secondItem="Rsn-RS-jnh" secondAttribute="centerX" id="jhs-5N-tBg"/>
+                                    <constraint firstItem="AE6-4F-9We" firstAttribute="centerY" secondItem="Rsn-RS-jnh" secondAttribute="centerY" id="vRy-K1-Du3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.074509803921568626" green="0.074509803921568626" blue="0.074509803921568626" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="L4k-C9-7nd" firstAttribute="top" relation="lessThanOrEqual" secondItem="9BP-m0-GlP" secondAttribute="bottom" constant="60" id="6gz-AH-hBT"/>
+                            <constraint firstItem="9BP-m0-GlP" firstAttribute="centerX" secondItem="C9x-bJ-wox" secondAttribute="centerX" id="92G-aa-n6Q"/>
+                            <constraint firstItem="e2l-CV-ZP3" firstAttribute="top" secondItem="L4k-C9-7nd" secondAttribute="bottom" constant="49" id="F3g-QK-kpN"/>
+                            <constraint firstItem="e2l-CV-ZP3" firstAttribute="centerX" secondItem="C9x-bJ-wox" secondAttribute="centerX" id="Ond-0n-eRC"/>
+                            <constraint firstItem="L4k-C9-7nd" firstAttribute="centerX" secondItem="C9x-bJ-wox" secondAttribute="centerX" id="Uak-uI-vNW"/>
+                            <constraint firstItem="Rsn-RS-jnh" firstAttribute="centerX" secondItem="C9x-bJ-wox" secondAttribute="centerX" id="Uy2-Us-d1V"/>
+                            <constraint firstItem="9BP-m0-GlP" firstAttribute="top" relation="lessThanOrEqual" secondItem="a38-I1-c9Q" secondAttribute="top" constant="131" id="Xfo-4V-UxL"/>
+                            <constraint firstItem="L4k-C9-7nd" firstAttribute="centerY" secondItem="C9x-bJ-wox" secondAttribute="centerY" id="ulD-vf-REh"/>
+                            <constraint firstItem="a38-I1-c9Q" firstAttribute="bottom" secondItem="Rsn-RS-jnh" secondAttribute="bottom" constant="168" id="w0A-xw-Zay"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="a38-I1-c9Q"/>
+                    </view>
+                    <connections>
+                        <outlet property="circle" destination="Rsn-RS-jnh" id="QPp-ys-rsV"/>
+                        <outlet property="userImage" destination="9BP-m0-GlP" id="QUF-FF-DNi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YgP-7l-pXy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.98550724637681" y="98.4375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="travis" width="800" height="1000"/>
+    </resources>
+</document>

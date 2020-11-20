@@ -44,6 +44,10 @@ class SecondScreenViewController: UIViewController, SecondScreenDisplayLogic {
         setup()
     }
     
+    func routeToSecondScreen() {
+        router?.routeToSuccess()
+    }
+    
     // MARK: Setup
     private func setup() {
         let viewController = self
@@ -64,5 +68,8 @@ class SecondScreenViewController: UIViewController, SecondScreenDisplayLogic {
         buttonLogin.layer.borderColor = viewModelButton.borderColor
         inputUser.attributedPlaceholder = viewModelInput.userPlaceHolder
         inputPassword.attributedPlaceholder = viewModelInput.passwordPlaceHolder
+    }
+    @IBAction func login(_ sender: Any) {
+        routeToSecondScreen()
     }
 }

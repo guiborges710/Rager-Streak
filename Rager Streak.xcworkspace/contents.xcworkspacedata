@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/guiulherme.martinelli/Documents/Rager-Streak/Rager Streak/Rager Streak/Home/HomePresenter.swift">
+   </FileRef>
+   <FileRef
       location = "group:Rager Streak.xcodeproj">
    </FileRef>
    <FileRef

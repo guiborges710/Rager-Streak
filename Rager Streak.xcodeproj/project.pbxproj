@@ -19,6 +19,13 @@
 		6D0ADA0B25598F6A00A6C3A6 /* Rager_StreakUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0ADA0A25598F6A00A6C3A6 /* Rager_StreakUITests.swift */; };
 		6D0ADA1A2559917E00A6C3A6 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0ADA192559917E00A6C3A6 /* UIColor+Hex.swift */; };
 		6D26E8D125685E3D00DB6771 /* RSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D26E8D025685E3D00DB6771 /* RSColor.swift */; };
+		6D26E8D5256863CF00DB6771 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D26E8D4256863CF00DB6771 /* HomeViewController.swift */; };
+		6D26E8D7256863DE00DB6771 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D26E8D6256863DE00DB6771 /* HomePresenter.swift */; };
+		6D26E8D9256863EB00DB6771 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D26E8D8256863EA00DB6771 /* HomeInteractor.swift */; };
+		6D26E8DB256863F600DB6771 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D26E8DA256863F600DB6771 /* HomeRouter.swift */; };
+		6D26E8DE2568642C00DB6771 /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D26E8DD2568642C00DB6771 /* HomeModels.swift */; };
+		6D26E8E12568648E00DB6771 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D26E8E02568648E00DB6771 /* Home.storyboard */; };
+		6D26E8E325686A6000DB6771 /* ImageView+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D26E8E225686A6000DB6771 /* ImageView+Circle.swift */; };
 		6D4FD4162567003000DBD4A9 /* RSNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4FD4152567003000DBD4A9 /* RSNavigationBar.swift */; };
 		6D4FD419256708D200DBD4A9 /* RSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4FD418256708D200DBD4A9 /* RSViewController.swift */; };
 		6D8CD6132562E392008BB608 /* FirstScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CD6122562E392008BB608 /* FirstScreenPresenter.swift */; };
@@ -72,6 +79,13 @@
 		6D0ADA0C25598F6A00A6C3A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D0ADA192559917E00A6C3A6 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		6D26E8D025685E3D00DB6771 /* RSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSColor.swift; sourceTree = "<group>"; };
+		6D26E8D4256863CF00DB6771 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6D26E8D6256863DE00DB6771 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomePresenter.swift; path = "/Users/guiulherme.martinelli/Documents/Rager-Streak/Rager Streak/Rager Streak/Home/HomePresenter.swift"; sourceTree = "<absolute>"; };
+		6D26E8D8256863EA00DB6771 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		6D26E8DA256863F600DB6771 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		6D26E8DD2568642C00DB6771 /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
+		6D26E8E02568648E00DB6771 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		6D26E8E225686A6000DB6771 /* ImageView+Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Circle.swift"; sourceTree = "<group>"; };
 		6D4FD4152567003000DBD4A9 /* RSNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNavigationBar.swift; sourceTree = "<group>"; };
 		6D4FD418256708D200DBD4A9 /* RSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSViewController.swift; sourceTree = "<group>"; };
 		6D8CD6122562E392008BB608 /* FirstScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenPresenter.swift; sourceTree = "<group>"; };
@@ -156,6 +170,7 @@
 		6D0AD9E725598F6700A6C3A6 /* Rager Streak */ = {
 			isa = PBXGroup;
 			children = (
+				6D26E8D3256863AE00DB6771 /* Home */,
 				6D8CD6112562E36D008BB608 /* FirstScreen */,
 				6D8CD623256311E8008BB608 /* SecondScreen */,
 				6D8CD6182562EFEA008BB608 /* Models */,
@@ -195,8 +210,30 @@
 			children = (
 				6D0ADA192559917E00A6C3A6 /* UIColor+Hex.swift */,
 				6D8CD61B2562FACF008BB608 /* UILabel+ChangeText.swift */,
+				6D26E8E225686A6000DB6771 /* ImageView+Circle.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		6D26E8D3256863AE00DB6771 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6D26E8DC2568641300DB6771 /* Models */,
+				6D26E8E02568648E00DB6771 /* Home.storyboard */,
+				6D26E8D6256863DE00DB6771 /* HomePresenter.swift */,
+				6D26E8D4256863CF00DB6771 /* HomeViewController.swift */,
+				6D26E8D8256863EA00DB6771 /* HomeInteractor.swift */,
+				6D26E8DA256863F600DB6771 /* HomeRouter.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		6D26E8DC2568641300DB6771 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6D26E8DD2568642C00DB6771 /* HomeModels.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		6D4FD4172567087F00DBD4A9 /* Components */ = {
@@ -361,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D0AD9F525598F6A00A6C3A6 /* LaunchScreen.storyboard in Resources */,
+				6D26E8E12568648E00DB6771 /* Home.storyboard in Resources */,
 				6D0AD9F225598F6A00A6C3A6 /* Assets.xcassets in Resources */,
 				6D8CD622256311C3008BB608 /* SecondScreen.storyboard in Resources */,
 				6D0AD9F025598F6700A6C3A6 /* Main.storyboard in Resources */,
@@ -460,16 +498,22 @@
 				6D8CD62725631398008BB608 /* SecondScreenInteractor.swift in Sources */,
 				6D8CD61E25630650008BB608 /* FirstScreenRouter.swift in Sources */,
 				6D4FD419256708D200DBD4A9 /* RSViewController.swift in Sources */,
+				6D26E8D9256863EB00DB6771 /* HomeInteractor.swift in Sources */,
 				6D8CD62B256313BA008BB608 /* SecondScreenRouter.swift in Sources */,
 				6D26E8D125685E3D00DB6771 /* RSColor.swift in Sources */,
+				6D26E8D5256863CF00DB6771 /* HomeViewController.swift in Sources */,
 				6D8CD629256313A8008BB608 /* SecondScreenPresenter.swift in Sources */,
 				6DEF99FB2566DB6600548A97 /* RSTextField.swift in Sources */,
 				6D0ADA1A2559917E00A6C3A6 /* UIColor+Hex.swift in Sources */,
+				6D26E8DE2568642C00DB6771 /* HomeModels.swift in Sources */,
 				6D8CD6152562E3B6008BB608 /* FirstScreenViewController.swift in Sources */,
+				6D26E8E325686A6000DB6771 /* ImageView+Circle.swift in Sources */,
 				6D4FD4162567003000DBD4A9 /* RSNavigationBar.swift in Sources */,
 				6D8CD61A2562F004008BB608 /* FirstScreenModels.swift in Sources */,
 				6D8CD6132562E392008BB608 /* FirstScreenPresenter.swift in Sources */,
 				6D0AD9E925598F6700A6C3A6 /* AppDelegate.swift in Sources */,
+				6D26E8D7256863DE00DB6771 /* HomePresenter.swift in Sources */,
+				6D26E8DB256863F600DB6771 /* HomeRouter.swift in Sources */,
 				6D8CD6252563138C008BB608 /* SecondScreenViewController.swift in Sources */,
 				6D8CD6172562E3DA008BB608 /* FirstScreenInteractor.swift in Sources */,
 				6D0AD9EB25598F6700A6C3A6 /* SceneDelegate.swift in Sources */,
