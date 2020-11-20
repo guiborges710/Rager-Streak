@@ -19,28 +19,33 @@ protocol SecondScreenDisplayLogic: class {
 class SecondScreenViewController: UIViewController, SecondScreenDisplayLogic {
     
     @IBOutlet weak var inputUser: RSTextField!
-    @IBOutlet weak var inputPassword: UITextField!
+    @IBOutlet weak var inputPassword: RSTextField!
     @IBOutlet weak var buttonLogin: UIButton!
-    
     var interactor: SecondScreenBusinessLogic?
     var router: (NSObjectProtocol & SecondScreenRoutingLogic & SecondScreenDataPassing)?
     
+    // MARK: View lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //TODO: Criar um componente para viewController
+        view.backgroundColor = UIColor(hexString: "131313")
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        interactor?.setupButtonAndInputs()
+    }
+    
     // MARK: Object lifecycle
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
-    {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
     }
     
-    required init?(coder aDecoder: NSCoder)
-    {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
     
     // MARK: Setup
-    private func setup()
-    {
+    private func setup() {
         let viewController = self
         let interactor = SecondScreenInteractor()
         let presenter = SecondScreenPresenter()
@@ -57,35 +62,7 @@ class SecondScreenViewController: UIViewController, SecondScreenDisplayLogic {
                              viewModelInput: LoginScreen.Model.RSInput) {
         buttonLogin.layer.borderWidth = viewModelButton.borderWidth
         buttonLogin.layer.borderColor = viewModelButton.borderColor
-        inputUser.attributedPlaceholder = viewModelInput.attributedPlaceholder
-        inputPassword.attributedPlaceholder = NSAttributedString(string: "Digite seu senha", attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray.withAlphaComponent(0.9)])
-    }
-    
-    // MARK: View lifecycle
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
-        //TODO: Criar um componente para navbar
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
-        view.backgroundColor = UIColor(hexString: "131313")
-        self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationController?.navigationBar.barTintColor = .clear
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.layoutIfNeeded()
-        interactor?.setupButtonAndInputs()
-    }
-
-    
-    // MARK: Routing
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        if let scene = segue.identifier {
-            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-            if let router = router, router.responds(to: selector) {
-                router.perform(selector, with: segue)
-            }
-        }
+        inputUser.attributedPlaceholder = viewModelInput.userPlaceHolder
+        inputPassword.attributedPlaceholder = viewModelInput.passwordPlaceHolder
     }
 }

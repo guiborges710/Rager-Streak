@@ -81,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="132.58928571428572"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation Bar-->
         <scene sceneID="26K-aZ-juf">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CRp-ze-Wcd" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CRp-ze-Wcd" customClass="RSNavigationBar" customModule="Rager_Streak" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ANj-ud-nII">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

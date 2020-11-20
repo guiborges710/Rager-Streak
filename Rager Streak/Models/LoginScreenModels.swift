@@ -25,7 +25,8 @@ enum LoginScreen {
         }
         
         struct RSInput {
-            let attributedPlaceholder: NSAttributedString
+            let userPlaceHolder: NSAttributedString
+            let passwordPlaceHolder: NSAttributedString
         }
     }
 

@@ -23,12 +23,20 @@ class SecondScreenPresenter: SecondScreenPresentationLogic
     weak var viewController: SecondScreenDisplayLogic?
     // MARK: Do something
     func setupButtonAndInputs() {
+        //button
         let color = UIColor(hexString: "7A4DDF").cgColor
-        let backgroundColor = UIColor(hexString: "131313")
         let viewModelButton = LoginScreen.Model.RSButton(borderColor: color, borderWidth: 1)
-        let viewModelInput = LoginScreen.Model.RSInput(attributedPlaceholder: NSAttributedString(string: "Digite seu usuário", attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray.withAlphaComponent(0.9)]))
+        //inputs
+        let userPlaceHolder = createPlaceHolder(string: "Digite seu usuário", opacity: 0.9)
+        let passwordPlaceHolder = createPlaceHolder(string: "Digite sua senha", opacity: 0.9)
+        let viewModelInput = LoginScreen.Model.RSInput(userPlaceHolder: userPlaceHolder,
+                                                  passwordPlaceHolder: passwordPlaceHolder)
         viewController?.setupButtonAndInput(viewModelButton: viewModelButton,
                                             viewModelInput: viewModelInput)
     }
     
+    private func createPlaceHolder(string: String, opacity: CGFloat) -> NSAttributedString {
+        let placeHolder = NSAttributedString(string: string, attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray.withAlphaComponent(opacity)])
+        return placeHolder
+    }
 }

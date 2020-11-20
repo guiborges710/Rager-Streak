@@ -18,6 +18,8 @@
 		6D0ADA0025598F6A00A6C3A6 /* Rager_StreakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0AD9FF25598F6A00A6C3A6 /* Rager_StreakTests.swift */; };
 		6D0ADA0B25598F6A00A6C3A6 /* Rager_StreakUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0ADA0A25598F6A00A6C3A6 /* Rager_StreakUITests.swift */; };
 		6D0ADA1A2559917E00A6C3A6 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0ADA192559917E00A6C3A6 /* UIColor+Hex.swift */; };
+		6D4FD4162567003000DBD4A9 /* RSNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4FD4152567003000DBD4A9 /* RSNavigationBar.swift */; };
+		6D4FD419256708D200DBD4A9 /* RSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4FD418256708D200DBD4A9 /* RSViewController.swift */; };
 		6D8CD6132562E392008BB608 /* LoginScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CD6122562E392008BB608 /* LoginScreenPresenter.swift */; };
 		6D8CD6152562E3B6008BB608 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CD6142562E3B6008BB608 /* LoginScreenViewController.swift */; };
 		6D8CD6172562E3DA008BB608 /* LoginScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CD6162562E3DA008BB608 /* LoginScreenInteractor.swift */; };
@@ -30,7 +32,6 @@
 		6D8CD629256313A8008BB608 /* SecondScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CD628256313A8008BB608 /* SecondScreenPresenter.swift */; };
 		6D8CD62B256313BA008BB608 /* SecondScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CD62A256313BA008BB608 /* SecondScreenRouter.swift */; };
 		6DEF99FB2566DB6600548A97 /* RSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEF99FA2566DB6600548A97 /* RSTextField.swift */; };
-		6DEF99FD2566DD2A00548A97 /* Empty.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DEF99FC2566DD2A00548A97 /* Empty.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		6D0ADA0A25598F6A00A6C3A6 /* Rager_StreakUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rager_StreakUITests.swift; sourceTree = "<group>"; };
 		6D0ADA0C25598F6A00A6C3A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D0ADA192559917E00A6C3A6 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		6D4FD4152567003000DBD4A9 /* RSNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNavigationBar.swift; sourceTree = "<group>"; };
+		6D4FD418256708D200DBD4A9 /* RSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSViewController.swift; sourceTree = "<group>"; };
 		6D8CD6122562E392008BB608 /* LoginScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenPresenter.swift; sourceTree = "<group>"; };
 		6D8CD6142562E3B6008BB608 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 		6D8CD6162562E3DA008BB608 /* LoginScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenInteractor.swift; sourceTree = "<group>"; };
@@ -81,7 +84,6 @@
 		6D8CD628256313A8008BB608 /* SecondScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenPresenter.swift; sourceTree = "<group>"; };
 		6D8CD62A256313BA008BB608 /* SecondScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenRouter.swift; sourceTree = "<group>"; };
 		6DEF99FA2566DB6600548A97 /* RSTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSTextField.swift; sourceTree = "<group>"; };
-		6DEF99FC2566DD2A00548A97 /* Empty.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Empty.xib; sourceTree = "<group>"; };
 		6E71E934D23872EAB5ACED6D /* Pods_Rager_Streak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rager_Streak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F41657E45D61CD56D97C5C6 /* Pods_Rager_StreakTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rager_StreakTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5E4A0372AC8FF65EC29A599 /* Pods-Rager Streak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rager Streak.debug.xcconfig"; path = "Target Support Files/Pods-Rager Streak/Pods-Rager Streak.debug.xcconfig"; sourceTree = "<group>"; };
@@ -152,12 +154,13 @@
 		6D0AD9E725598F6700A6C3A6 /* Rager Streak */ = {
 			isa = PBXGroup;
 			children = (
+				6D8CD6112562E36D008BB608 /* LoginScreen */,
+				6D8CD623256311E8008BB608 /* SecondScreen */,
+				6D8CD6182562EFEA008BB608 /* Models */,
+				6D0ADA18255990F000A6C3A6 /* Resources */,
+				6D4FD4172567087F00DBD4A9 /* Components */,
 				6D0AD9EE25598F6700A6C3A6 /* Main.storyboard */,
 				6D8CD621256311C3008BB608 /* SecondScreen.storyboard */,
-				6D8CD6182562EFEA008BB608 /* Models */,
-				6D8CD623256311E8008BB608 /* SecondScreen */,
-				6D8CD6112562E36D008BB608 /* LoginScreen */,
-				6D0ADA18255990F000A6C3A6 /* Resources */,
 				6D0AD9E825598F6700A6C3A6 /* AppDelegate.swift */,
 				6D0AD9EA25598F6700A6C3A6 /* SceneDelegate.swift */,
 				6D0AD9F125598F6A00A6C3A6 /* Assets.xcassets */,
@@ -190,10 +193,18 @@
 			children = (
 				6D0ADA192559917E00A6C3A6 /* UIColor+Hex.swift */,
 				6D8CD61B2562FACF008BB608 /* UILabel+ChangeText.swift */,
-				6DEF99FA2566DB6600548A97 /* RSTextField.swift */,
-				6DEF99FC2566DD2A00548A97 /* Empty.xib */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		6D4FD4172567087F00DBD4A9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6DEF99FA2566DB6600548A97 /* RSTextField.swift */,
+				6D4FD4152567003000DBD4A9 /* RSNavigationBar.swift */,
+				6D4FD418256708D200DBD4A9 /* RSViewController.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		6D8CD6112562E36D008BB608 /* LoginScreen */ = {
@@ -236,7 +247,6 @@
 				FC827A8239961AC191B00A8A /* Pods-Rager StreakTests.debug.xcconfig */,
 				2D59F1CD2A128987A7D4FDB7 /* Pods-Rager StreakTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -347,7 +357,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DEF99FD2566DD2A00548A97 /* Empty.xib in Resources */,
 				6D0AD9F525598F6A00A6C3A6 /* LaunchScreen.storyboard in Resources */,
 				6D0AD9F225598F6A00A6C3A6 /* Assets.xcassets in Resources */,
 				6D8CD622256311C3008BB608 /* SecondScreen.storyboard in Resources */,
@@ -447,11 +456,13 @@
 			files = (
 				6D8CD62725631398008BB608 /* SecondScreenInteractor.swift in Sources */,
 				6D8CD61E25630650008BB608 /* LoginScreenRouter.swift in Sources */,
+				6D4FD419256708D200DBD4A9 /* RSViewController.swift in Sources */,
 				6D8CD62B256313BA008BB608 /* SecondScreenRouter.swift in Sources */,
 				6D8CD629256313A8008BB608 /* SecondScreenPresenter.swift in Sources */,
 				6DEF99FB2566DB6600548A97 /* RSTextField.swift in Sources */,
 				6D0ADA1A2559917E00A6C3A6 /* UIColor+Hex.swift in Sources */,
 				6D8CD6152562E3B6008BB608 /* LoginScreenViewController.swift in Sources */,
+				6D4FD4162567003000DBD4A9 /* RSNavigationBar.swift in Sources */,
 				6D8CD61A2562F004008BB608 /* LoginScreenModels.swift in Sources */,
 				6D8CD6132562E392008BB608 /* LoginScreenPresenter.swift in Sources */,
 				6D0AD9E925598F6700A6C3A6 /* AppDelegate.swift in Sources */,

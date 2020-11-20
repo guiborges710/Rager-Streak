@@ -25,5 +25,4 @@ class LoginScreenPresenter: LoginScreenPresentationLogic {
         let viewModel = LoginScreen.Model.RSButton(borderColor: color, borderWidth: 1)
         viewController?.setupButton(buttonViewModel: viewModel)
     }
-  
 }
