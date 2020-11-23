@@ -24,7 +24,10 @@ class HomeViewController: UIViewController, HomeDisplayLogic
 
   // MARK: Object lifecycle
   
-    @IBOutlet weak var circle: UIView!
+    
+    @IBOutlet weak var viewDefeats: UIView!
+    @IBOutlet weak var viewVictories: UIView!
+    @IBOutlet weak var viewRages: UIView!
     @IBOutlet weak var userImage: UIImageView!
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
   {
@@ -60,30 +63,34 @@ class HomeViewController: UIViewController, HomeDisplayLogic
   {
     super.viewDidLoad()
     self.navigationController?.setNavigationBarHidden(false, animated: false)
-    circle.layer.cornerRadius = 41
-    
-    circle.layer.borderColor = RSColor().purpleColor().cgColor
-    circle.layer.borderWidth = 2
-    
+    setupViews(circleView: viewRages, color: RSColor().purpleColor())
+    setupViews(circleView: viewDefeats, color: RSColor().redColor())
+    setupViews(circleView: viewVictories, color: RSColor().greenColor())
+
     userImage.makeRounded()
     doSomething()
-  }
-  
-  // MARK: Do something
-  
-  //@IBOutlet weak var nameTextField: UITextField!
-  
-  func doSomething()
-  {
-    let request = Home.Something.Request()
-    interactor?.doSomething(request: request)
-  }
-  
-  func displaySomething(viewModel: Home.Something.ViewModel)
-  {
-    //nameTextField.text = viewModel.name
-  }
+    }
     
+    // MARK: Do something
+    
+    //@IBOutlet weak var nameTextField: UITextField!
+    
+    func doSomething()
+    {
+        let request = Home.Something.Request()
+        interactor?.doSomething(request: request)
+    }
+    
+    func displaySomething(viewModel: Home.Something.ViewModel)
+    {
+        //nameTextField.text = viewModel.name
+    }
+    
+    func setupViews(circleView: UIView, color: UIColor) {
+        circleView.layer.cornerRadius = 41
+        circleView.layer.borderColor = color.cgColor
+        circleView.layer.borderWidth = 2
+    }
     
 }
 

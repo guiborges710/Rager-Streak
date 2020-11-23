@@ -13,4 +13,12 @@ class RSColor: UIColor {
     func purpleColor() -> UIColor {
         return UIColor(hexString: "7A4DDF")
     }
+    
+    func greenColor() -> UIColor {
+        return UIColor(hexString: "46AE56")
+    }
+    
+    func redColor() -> UIColor {
+        return UIColor(hexString: "9F2424")
+    }
 }
