@@ -63,6 +63,9 @@ class HomeViewController: UIViewController, HomeDisplayLogic
   {
     super.viewDidLoad()
     self.navigationController?.setNavigationBarHidden(false, animated: false)
+    
+    setupRightButtonNavBar()
+    setupLeftButtonNavBar()
     setupViews(circleView: viewRages, color: RSColor().purpleColor())
     setupViews(circleView: viewDefeats, color: RSColor().redColor())
     setupViews(circleView: viewVictories, color: RSColor().greenColor())
@@ -71,9 +74,11 @@ class HomeViewController: UIViewController, HomeDisplayLogic
     doSomething()
     }
     
-    // MARK: Do something
-    
-    //@IBOutlet weak var nameTextField: UITextField!
+    @objc
+    func action(sender: UIBarButtonItem) {
+        
+    }
+
     
     func doSomething()
     {
@@ -94,3 +99,24 @@ class HomeViewController: UIViewController, HomeDisplayLogic
     
 }
 
+extension HomeViewController {
+    func setupRightButtonNavBar() {
+        let img = UIImage(named: "editIcon")!.withRenderingMode(.alwaysOriginal)
+        let rightButton = UIBarButtonItem(image: img,
+                                          style: UIBarButtonItem.Style.plain,
+                                          target: self,
+                                          action: #selector(self.action))
+        self.navigationItem.rightBarButtonItem = rightButton
+
+    }
+    
+    func setupLeftButtonNavBar() {
+        let img = UIImage(named: "backButton")!.withRenderingMode(.alwaysOriginal)
+        let leftButton = UIBarButtonItem(image: img,
+                                          style: UIBarButtonItem.Style.plain,
+                                          target: self,
+                                          action: #selector(self.action))
+        self.navigationItem.leftBarButtonItem = leftButton
+    }
+    
+}
