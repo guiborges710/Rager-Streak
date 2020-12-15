@@ -102,22 +102,12 @@ class HomeViewController: UIViewController, HomeDisplayLogic
 
 extension HomeViewController {
     func setupRightButtonNavBar() {
-        let img = UIImage(named: "editIcon")!.withRenderingMode(.alwaysOriginal)
-        let rightButton = UIBarButtonItem(image: img,
-                                          style: UIBarButtonItem.Style.plain,
-                                          target: self,
-                                          action: #selector(self.action))
-        self.navigationItem.rightBarButtonItem = rightButton
+        self.navigationItem.rightBarButtonItem = self.navigationController?.setupRightButtonNavBar()
 
     }
     
     func setupLeftButtonNavBar() {
-        let img = UIImage(named: "backButton")!.withRenderingMode(.alwaysOriginal)
-        let leftButton = UIBarButtonItem(image: img,
-                                          style: UIBarButtonItem.Style.plain,
-                                          target: self,
-                                          action: #selector(self.action))
-        self.navigationItem.leftBarButtonItem = leftButton
+        self.navigationItem.leftBarButtonItem = self.navigationController?.setupLeftButtonNavBar()
     }
     
 }

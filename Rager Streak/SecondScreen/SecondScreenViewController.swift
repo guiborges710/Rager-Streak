@@ -30,9 +30,14 @@ class SecondScreenViewController: UIViewController, SecondScreenDisplayLogic {
         //TODO: Criar um componente para viewController
         view.backgroundColor = UIColor(hexString: "131313")
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+        setupLeftButtonNavBar()
         interactor?.setupButtonAndInputs()
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tabBarController?.tabBar.isHidden = true
+    }
     // MARK: Object lifecycle
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -71,5 +76,11 @@ class SecondScreenViewController: UIViewController, SecondScreenDisplayLogic {
     }
     @IBAction func login(_ sender: Any) {
         routeToSecondScreen()
+    }
+}
+
+extension SecondScreenViewController {
+    func setupLeftButtonNavBar() {
+        self.navigationItem.leftBarButtonItem = self.navigationController?.setupLeftButtonNavBar()
     }
 }

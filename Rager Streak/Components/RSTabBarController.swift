@@ -14,6 +14,7 @@ class RSTabBarController: UITabBarController, UITabBarControllerDelegate {
         customTabBar()
         setTabBarItems()
     }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tabBar.frame.size.height = 78

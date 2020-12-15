@@ -57,10 +57,11 @@ class FirstScreenViewController: UIViewController, FirstScreenDisplayLogic {
         view.backgroundColor = UIColor(hexString: "131313")
         tabBarController?.tabBar.isHidden = true
         interactor?.setupButton()
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     // MARK: Do something
     func routeToSecondScreen() {
