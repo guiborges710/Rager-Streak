@@ -21,4 +21,9 @@ class RSColor: UIColor {
     func redColor() -> UIColor {
         return UIColor(hexString: "9F2424")
     }
+
+    func grayColor() -> UIColor {
+        return UIColor(hexString: "222126")
+    }
+    
 }

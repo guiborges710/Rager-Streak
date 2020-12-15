@@ -39,6 +39,7 @@
 		6D8CD62725631398008BB608 /* SecondScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CD62625631398008BB608 /* SecondScreenInteractor.swift */; };
 		6D8CD629256313A8008BB608 /* SecondScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CD628256313A8008BB608 /* SecondScreenPresenter.swift */; };
 		6D8CD62B256313BA008BB608 /* SecondScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CD62A256313BA008BB608 /* SecondScreenRouter.swift */; };
+		6DBD745C25892588007A3178 /* RSTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBD745B25892588007A3178 /* RSTabBarController.swift */; };
 		6DEF99FB2566DB6600548A97 /* RSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEF99FA2566DB6600548A97 /* RSTextField.swift */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +100,7 @@
 		6D8CD62625631398008BB608 /* SecondScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenInteractor.swift; sourceTree = "<group>"; };
 		6D8CD628256313A8008BB608 /* SecondScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenPresenter.swift; sourceTree = "<group>"; };
 		6D8CD62A256313BA008BB608 /* SecondScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenRouter.swift; sourceTree = "<group>"; };
+		6DBD745B25892588007A3178 /* RSTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSTabBarController.swift; sourceTree = "<group>"; };
 		6DEF99FA2566DB6600548A97 /* RSTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSTextField.swift; sourceTree = "<group>"; };
 		6E71E934D23872EAB5ACED6D /* Pods_Rager_Streak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rager_Streak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F41657E45D61CD56D97C5C6 /* Pods_Rager_StreakTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rager_StreakTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -239,6 +241,7 @@
 		6D4FD4172567087F00DBD4A9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				6DBD745B25892588007A3178 /* RSTabBarController.swift */,
 				6DEF99FA2566DB6600548A97 /* RSTextField.swift */,
 				6D4FD4152567003000DBD4A9 /* RSNavigationBar.swift */,
 				6D4FD418256708D200DBD4A9 /* RSViewController.swift */,
@@ -504,6 +507,7 @@
 				6D26E8D5256863CF00DB6771 /* HomeViewController.swift in Sources */,
 				6D8CD629256313A8008BB608 /* SecondScreenPresenter.swift in Sources */,
 				6DEF99FB2566DB6600548A97 /* RSTextField.swift in Sources */,
+				6DBD745C25892588007A3178 /* RSTabBarController.swift in Sources */,
 				6D0ADA1A2559917E00A6C3A6 /* UIColor+Hex.swift in Sources */,
 				6D26E8DE2568642C00DB6771 /* HomeModels.swift in Sources */,
 				6D8CD6152562E3B6008BB608 /* FirstScreenViewController.swift in Sources */,

@@ -19,10 +19,10 @@ protocol HomeDisplayLogic: class
 
 class HomeViewController: UIViewController, HomeDisplayLogic
 {
-  var interactor: HomeBusinessLogic?
-  var router: (NSObjectProtocol & HomeRoutingLogic & HomeDataPassing)?
-
-  // MARK: Object lifecycle
+    var interactor: HomeBusinessLogic?
+    var router: (NSObjectProtocol & HomeRoutingLogic & HomeDataPassing)?
+    
+    // MARK: Object lifecycle
   
     
     @IBOutlet weak var viewDefeats: UIView!
@@ -63,7 +63,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic
   {
     super.viewDidLoad()
     self.navigationController?.setNavigationBarHidden(false, animated: false)
-    
+    tabBarController?.tabBar.isHidden = false
     setupRightButtonNavBar()
     setupLeftButtonNavBar()
     setupViews(circleView: viewRages, color: RSColor().purpleColor())
@@ -72,6 +72,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic
 
     userImage.makeRounded()
     doSomething()
+    
     }
     
     @objc

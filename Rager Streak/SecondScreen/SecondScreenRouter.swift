@@ -28,7 +28,7 @@ class SecondScreenRouter: NSObject, SecondScreenRoutingLogic, SecondScreenDataPa
     var dataStore: SecondScreenDataStore?
     
     func routeToSuccess() {
-        let destination: HomeViewController = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        let destination: HomeViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         
 //        var destinationDS = destination.router?.dataStore
         viewController?.navigationController?.pushViewController(destination, animated: true)

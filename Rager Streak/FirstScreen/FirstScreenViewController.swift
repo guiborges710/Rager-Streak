@@ -55,7 +55,7 @@ class FirstScreenViewController: UIViewController, FirstScreenDisplayLogic {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         view.backgroundColor = UIColor(hexString: "131313")
-        
+        tabBarController?.tabBar.isHidden = true
         interactor?.setupButton()
     }
     override func viewWillAppear(_ animated: Bool) {
