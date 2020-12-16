@@ -30,7 +30,7 @@ class SecondScreenViewController: UIViewController, SecondScreenDisplayLogic {
         //TODO: Criar um componente para viewController
         view.backgroundColor = UIColor(hexString: "131313")
         self.navigationController?.setNavigationBarHidden(false, animated: false)
-        setupLeftButtonNavBar()
+        self.navigationItem.leftBarButtonItem = self.navigationController?.setupLeftButtonNavBar()
         interactor?.setupButtonAndInputs()
     }
     
@@ -76,11 +76,5 @@ class SecondScreenViewController: UIViewController, SecondScreenDisplayLogic {
     }
     @IBAction func login(_ sender: Any) {
         routeToSecondScreen()
-    }
-}
-
-extension SecondScreenViewController {
-    func setupLeftButtonNavBar() {
-        self.navigationItem.leftBarButtonItem = self.navigationController?.setupLeftButtonNavBar()
     }
 }

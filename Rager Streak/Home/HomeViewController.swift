@@ -63,24 +63,22 @@ class HomeViewController: UIViewController, HomeDisplayLogic
   {
     super.viewDidLoad()
     self.navigationController?.setNavigationBarHidden(false, animated: false)
-    tabBarController?.tabBar.isHidden = false
-    setupRightButtonNavBar()
-    setupLeftButtonNavBar()
+    
+    setupNavBar()
     setupViews(circleView: viewRages, color: RSColor().purpleColor())
     setupViews(circleView: viewDefeats, color: RSColor().redColor())
     setupViews(circleView: viewVictories, color: RSColor().greenColor())
 
     userImage.makeRounded()
     doSomething()
-    
-    }
-    
-    @objc
-    func action(sender: UIBarButtonItem) {
-        
+    tabBarController?.tabBar.isHidden = false
     }
 
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(false)
+        tabBarController?.tabBar.isHidden = false
+    }
+
     func doSomething()
     {
         let request = Home.Something.Request()
@@ -101,13 +99,8 @@ class HomeViewController: UIViewController, HomeDisplayLogic
 }
 
 extension HomeViewController {
-    func setupRightButtonNavBar() {
+    func setupNavBar() {
         self.navigationItem.rightBarButtonItem = self.navigationController?.setupRightButtonNavBar()
-
-    }
-    
-    func setupLeftButtonNavBar() {
         self.navigationItem.leftBarButtonItem = self.navigationController?.setupLeftButtonNavBar()
     }
-    
 }

@@ -34,7 +34,10 @@ class RSTabBarController: UITabBarController, UITabBarControllerDelegate {
     }
     
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        
+//        let destination: RagersViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RagersViewController") as! RagersViewController
+//
+//        var destinationDS = destination.router?.dataStore
+//        viewController.navigationController?.pushViewController(destination, animated: true)
         return true;
     }
     

@@ -26,4 +26,11 @@ class RSColor: UIColor {
         return UIColor(hexString: "222126")
     }
     
+    func searchBarColor() -> UIColor {
+        return UIColor(hexString: "252525")
+    }
+    func blackColor() -> UIColor {
+        return UIColor(hexString: "121212")
+    }
+    
 }
