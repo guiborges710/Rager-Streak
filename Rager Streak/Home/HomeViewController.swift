@@ -63,7 +63,9 @@ class HomeViewController: UIViewController, HomeDisplayLogic
   {
     super.viewDidLoad()
     self.navigationController?.setNavigationBarHidden(false, animated: false)
-    
+    self.view.backgroundColor = RSColor().blackColor()
+    self.title = "Travis Scott"
+    self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
     setupNavBar()
     setupViews(circleView: viewRages, color: RSColor().purpleColor())
     setupViews(circleView: viewDefeats, color: RSColor().redColor())

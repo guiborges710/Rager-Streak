@@ -24,7 +24,6 @@
 		6D26E8D9256863EB00DB6771 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D26E8D8256863EA00DB6771 /* HomeInteractor.swift */; };
 		6D26E8DB256863F600DB6771 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D26E8DA256863F600DB6771 /* HomeRouter.swift */; };
 		6D26E8DE2568642C00DB6771 /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D26E8DD2568642C00DB6771 /* HomeModels.swift */; };
-		6D26E8E12568648E00DB6771 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D26E8E02568648E00DB6771 /* Home.storyboard */; };
 		6D26E8E325686A6000DB6771 /* ImageView+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D26E8E225686A6000DB6771 /* ImageView+Circle.swift */; };
 		6D4FD4162567003000DBD4A9 /* RSNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4FD4152567003000DBD4A9 /* RSNavigationBar.swift */; };
 		6D4FD419256708D200DBD4A9 /* RSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4FD418256708D200DBD4A9 /* RSViewController.swift */; };
@@ -93,7 +92,6 @@
 		6D26E8D8256863EA00DB6771 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		6D26E8DA256863F600DB6771 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		6D26E8DD2568642C00DB6771 /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
-		6D26E8E02568648E00DB6771 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		6D26E8E225686A6000DB6771 /* ImageView+Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Circle.swift"; sourceTree = "<group>"; };
 		6D4FD4152567003000DBD4A9 /* RSNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNavigationBar.swift; sourceTree = "<group>"; };
 		6D4FD418256708D200DBD4A9 /* RSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSViewController.swift; sourceTree = "<group>"; };
@@ -238,7 +236,6 @@
 			isa = PBXGroup;
 			children = (
 				6D26E8DC2568641300DB6771 /* Models */,
-				6D26E8E02568648E00DB6771 /* Home.storyboard */,
 				6D26E8D6256863DE00DB6771 /* HomePresenter.swift */,
 				6D26E8D4256863CF00DB6771 /* HomeViewController.swift */,
 				6D26E8D8256863EA00DB6771 /* HomeInteractor.swift */,
@@ -450,7 +447,6 @@
 			files = (
 				6D0AD9F525598F6A00A6C3A6 /* LaunchScreen.storyboard in Resources */,
 				6DD1BE0E258A7BA500126B6C /* TableViewCell.xib in Resources */,
-				6D26E8E12568648E00DB6771 /* Home.storyboard in Resources */,
 				6D0AD9F225598F6A00A6C3A6 /* Assets.xcassets in Resources */,
 				6D8CD622256311C3008BB608 /* SecondScreen.storyboard in Resources */,
 				6D0AD9F025598F6700A6C3A6 /* Main.storyboard in Resources */,

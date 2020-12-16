@@ -10,11 +10,5 @@ import UIKit
 
 class RSViewController: UINavigationController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
-    func navigationBarIsHidden() {
-        self.navigationController?.setToolbarHidden(true, animated: false)
-    }
 }

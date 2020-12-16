@@ -12,15 +12,14 @@
 
 import UIKit
 
-protocol RagersDisplayLogic: class
-{
+protocol RagersDisplayLogic: class {
   func displaySomething(viewModel: Ragers.Something.ViewModel)
 }
 
-class RagersViewController: UIViewController, RagersDisplayLogic
-{
+class RagersViewController: UIViewController, RagersDisplayLogic {
 
     @IBOutlet weak var tableViewRagers: UITableView!
+    @IBOutlet weak var searchRagers: UISearchBar!
     var interactor: RagersBusinessLogic?
   var router: (NSObjectProtocol & RagersRoutingLogic & RagersDataPassing)?
 
@@ -60,6 +59,7 @@ class RagersViewController: UIViewController, RagersDisplayLogic
   {
     super.viewDidLoad()
     doSomething()
+    setupSearchBar()
     self.view.backgroundColor = RSColor().blackColor()
     arrayOfCellData = [Ragers.CellData(image: #imageLiteral(resourceName: "travis"), name: "Guilherme Borges", game: "Jogo: Valorant", rages: "10 Rages em partidas"),
     Ragers.CellData(image: #imageLiteral(resourceName: "travis"), name: "Lucas Yuji", game: "Jogo: Valorant", rages: "15 Rages em partidas"),
@@ -69,7 +69,12 @@ class RagersViewController: UIViewController, RagersDisplayLogic
   }
   
   // MARK: Do something
-  
+    private func setupSearchBar() {
+        if let textFieldSearchBar = searchRagers.value(forKey: "searchField") as? UITextField {
+            textFieldSearchBar.textColor = .white
+        }
+        
+    }
   func doSomething()
   {
     let request = Ragers.Something.Request()
