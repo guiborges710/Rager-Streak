@@ -1,0 +1,6 @@
+framework module Pods_Rager_Streak_Rager_StreakUITests {
+  umbrella header "Pods-Rager Streak-Rager StreakUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

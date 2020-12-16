@@ -14,26 +14,24 @@ import UIKit
 
 protocol SecondScreenBusinessLogic
 {
-    func applyTextOnLabel()
+    func setupButtonAndInputs()
 }
 
 protocol SecondScreenDataStore
 {
-    var user: LoginScreen.Model.User? { get set }
+    var user: FirstScreen.Model.User? { get set }
 }
 
 class SecondScreenInteractor: SecondScreenBusinessLogic, SecondScreenDataStore
 {
     
-    var user: LoginScreen.Model.User?
+    var user: FirstScreen.Model.User?
     
     var presenter: SecondScreenPresentationLogic?
     
-    func applyTextOnLabel() {
-        
-        if let usuario = user {
-            presenter?.changeLabel(string: usuario.nome)
-        }
+    // MARK: Do something
+    func setupButtonAndInputs() {
+        presenter?.setupButtonAndInputs()
     }
     
 }

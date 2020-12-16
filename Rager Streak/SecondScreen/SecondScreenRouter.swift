@@ -14,47 +14,23 @@ import UIKit
 
 @objc protocol SecondScreenRoutingLogic
 {
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
+    func routeToSuccess()
 }
 
 protocol SecondScreenDataPassing
 {
-  var dataStore: SecondScreenDataStore? { get }
+    var dataStore: SecondScreenDataStore? { get }
 }
 
 class SecondScreenRouter: NSObject, SecondScreenRoutingLogic, SecondScreenDataPassing
 {
-  weak var viewController: SecondScreenViewController?
-  var dataStore: SecondScreenDataStore?
-  
-  // MARK: Routing
-  
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
-  //{
-  //  if let segue = segue {
-  //    let destinationVC = segue.destination as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //  } else {
-  //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-  //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-  //  }
-  //}
-
-  // MARK: Navigation
-  
-  //func navigateToSomewhere(source: SecondScreenViewController, destination: SomewhereViewController)
-  //{
-  //  source.show(destination, sender: nil)
-  //}
-  
-  // MARK: Passing data
-  
-  //func passDataToSomewhere(source: SecondScreenDataStore, destination: inout SomewhereDataStore)
-  //{
-  //  destination.name = source.name
-  //}
+    weak var viewController: SecondScreenViewController?
+    var dataStore: SecondScreenDataStore?
+    
+    func routeToSuccess() {
+        let destination: HomeViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        
+//        var destinationDS = destination.router?.dataStore
+        viewController?.navigationController?.pushViewController(destination, animated: true)
+    }
 }

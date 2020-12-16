@@ -1,5 +1,5 @@
 //
-//  LoginScreenModels.swift
+//  FirstScreenModels.swift
 //  Rager Streak
 //
 //  Created by guilherme.martinelli on 16/11/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum LoginScreen {
+enum FirstScreen {
     enum Model {
         struct User {
             var nome: String
@@ -17,6 +17,16 @@ enum LoginScreen {
         struct LabelViewModel {
             let textMessage: String
             let colorMessage: UIColor
+        }
+        
+        struct RSButton {
+            let borderColor: CGColor
+            let borderWidth: CGFloat
+        }
+        
+        struct RSInput {
+            let userPlaceHolder: NSAttributedString
+            let passwordPlaceHolder: NSAttributedString
         }
     }
 

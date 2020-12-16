@@ -13,35 +13,48 @@
 import UIKit
 
 protocol SecondScreenDisplayLogic: class {
-    func changeLabel(string: String)
+    func setupButtonAndInput(viewModelButton: FirstScreen.Model.RSButton, viewModelInput: FirstScreen.Model.RSInput)
 }
 
 class SecondScreenViewController: UIViewController, SecondScreenDisplayLogic {
     
-    @IBOutlet weak var label: UILabel!
-    
+    @IBOutlet weak var inputUser: RSTextField!
+    @IBOutlet weak var inputPassword: RSTextField!
+    @IBOutlet weak var buttonLogin: UIButton!
     var interactor: SecondScreenBusinessLogic?
     var router: (NSObjectProtocol & SecondScreenRoutingLogic & SecondScreenDataPassing)?
     
-    // MARK: Object lifecycle
+    // MARK: View lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //TODO: Criar um componente para viewController
+        view.backgroundColor = UIColor(hexString: "131313")
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        self.navigationItem.leftBarButtonItem = self.navigationController?.setupLeftButtonNavBar()
+        interactor?.setupButtonAndInputs()
+    }
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
-    {
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tabBarController?.tabBar.isHidden = true
+    }
+    // MARK: Object lifecycle
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
     }
     
-    required init?(coder aDecoder: NSCoder)
-    {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
-        
+    }
+    
+    func routeToSecondScreen() {
+        router?.routeToSuccess()
     }
     
     // MARK: Setup
-    
-    private func setup()
-    {
+    private func setup() {
         let viewController = self
         let interactor = SecondScreenInteractor()
         let presenter = SecondScreenPresenter()
@@ -54,32 +67,14 @@ class SecondScreenViewController: UIViewController, SecondScreenDisplayLogic {
         router.dataStore = interactor
     }
     
-    // MARK: Routing
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        if let scene = segue.identifier {
-            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-            if let router = router, router.responds(to: selector) {
-                router.perform(selector, with: segue)
-            }
-        }
+    func setupButtonAndInput(viewModelButton: FirstScreen.Model.RSButton,
+                             viewModelInput: FirstScreen.Model.RSInput) {
+        buttonLogin.layer.borderWidth = viewModelButton.borderWidth
+        buttonLogin.layer.borderColor = viewModelButton.borderColor
+        inputUser.attributedPlaceholder = viewModelInput.userPlaceHolder
+        inputPassword.attributedPlaceholder = viewModelInput.passwordPlaceHolder
     }
-    
-    // MARK: View lifecycle
-    
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
-        interactor?.applyTextOnLabel()
+    @IBAction func login(_ sender: Any) {
+        routeToSecondScreen()
     }
-    
-    func changeLabel(string: String) {
-        label.text = string
-    }
-    // MARK: Do something
-    
-    //@IBOutlet weak var nameTextField: UITextField!
-    
 }
