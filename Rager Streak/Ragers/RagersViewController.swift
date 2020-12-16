@@ -18,29 +18,26 @@ protocol RagersDisplayLogic: class {
 
 class RagersViewController: UIViewController, RagersDisplayLogic {
 
-    @IBOutlet weak var tableViewRagers: UITableView!
+    @IBOutlet weak var tableViewRagers: TableViewRagers!
     @IBOutlet weak var searchRagers: UISearchBar!
     var interactor: RagersBusinessLogic?
-  var router: (NSObjectProtocol & RagersRoutingLogic & RagersDataPassing)?
+    var router: (NSObjectProtocol & RagersRoutingLogic & RagersDataPassing)?
 
   // MARK: Object lifecycle
   
-  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
-  {
+  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     setup()
   }
   
-  required init?(coder aDecoder: NSCoder)
-  {
+  required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     setup()
   }
   
   // MARK: Setup
   
-  private func setup()
-  {
+  private func setup() {
     let viewController = self
     let interactor = RagersInteractor()
     let presenter = RagersPresenter()
@@ -54,18 +51,16 @@ class RagersViewController: UIViewController, RagersDisplayLogic {
   }
   
   // MARK: View lifecycle
-    var arrayOfCellData = [Ragers.CellData]()
-  override func viewDidLoad()
-  {
-    super.viewDidLoad()
-    doSomething()
-    setupSearchBar()
-    self.view.backgroundColor = RSColor().blackColor()
-    arrayOfCellData = [Ragers.CellData(image: #imageLiteral(resourceName: "travis"), name: "Guilherme Borges", game: "Jogo: Valorant", rages: "10 Rages em partidas"),
-    Ragers.CellData(image: #imageLiteral(resourceName: "travis"), name: "Lucas Yuji", game: "Jogo: Valorant", rages: "15 Rages em partidas"),
-    Ragers.CellData(image: #imageLiteral(resourceName: "travis"), name: "Lucas Yuji", game: "Jogo: League Of Legends", rages: "15 Rages em partidas")]
-    tableViewRagers.delegate = self
-    tableViewRagers.dataSource = self
+//  var arrayOfCellData = [Ragers.CellData]()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        doSomething()
+        
+        self.view.backgroundColor = RSColor().blackColor()
+        
+        tableViewRagers.createRagers()
+        tableViewRagers.delegate = self.tableViewRagers
+        tableViewRagers.dataSource = self.tableViewRagers
   }
   
   // MARK: Do something
@@ -75,36 +70,16 @@ class RagersViewController: UIViewController, RagersDisplayLogic {
         }
         
     }
-  func doSomething()
-  {
+    
+  func doSomething() {
     let request = Ragers.Something.Request()
     interactor?.doSomething(request: request)
     self.navigationController?.setNavigationBarHidden(false, animated: false)
+    setupSearchBar()
   }
   
   func displaySomething(viewModel: Ragers.Something.ViewModel)
   {
     //nameTextField.text = viewModel.name
   }
-}
-
-extension RagersViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayOfCellData.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = Bundle.main.loadNibNamed("TableViewCell", owner: self, options: nil)?.first as! TableViewCell
-        cell.imageUser.image = arrayOfCellData[indexPath.row].image
-        cell.imageUser.makeRounded()
-        cell.labelName.text = arrayOfCellData[indexPath.row].name
-        cell.labelGame.text = arrayOfCellData[indexPath.row].game
-        cell.labelRages.text = arrayOfCellData[indexPath.row].rages
-        
-        return cell
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return 88
-        }
-    
 }
