@@ -13,66 +13,128 @@
 import UIKit
 
 protocol RagersDisplayLogic: class {
-
+    
 }
 
 class RagersViewController: UIViewController, RagersDisplayLogic {
-
+    
     @IBOutlet weak var tableViewRagers: TableViewRagers!
     @IBOutlet weak var searchRagers: UISearchBar!
     var interactor: RagersBusinessLogic?
     var router: (NSObjectProtocol & RagersRoutingLogic & RagersDataPassing)?
-
-  // MARK: Object lifecycle
-  
-  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    setup()
-  }
-  
-  required init?(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
-    setup()
-  }
-  
-  // MARK: Setup
-  
-  private func setup() {
-    let viewController = self
-    let interactor = RagersInteractor()
-    let presenter = RagersPresenter()
-    let router = RagersRouter()
-    viewController.interactor = interactor
-    viewController.router = router
-    interactor.presenter = presenter
-    presenter.viewController = viewController
-    router.viewController = viewController
-    router.dataStore = interactor
-  }
-  
-  // MARK: View lifecycle
-
+    var ragerSearch = [Ragers.Rager]()
+    var ragersList = [Ragers.Rager]()
+    // MARK: Object lifecycle
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    // MARK: Setup
+    
+    private func setup() {
+        let viewController = self
+        let interactor = RagersInteractor()
+        let presenter = RagersPresenter()
+        let router = RagersRouter()
+        viewController.interactor = interactor
+        viewController.router = router
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+        router.viewController = viewController
+        router.dataStore = interactor
+    }
+    
+    // MARK: View lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = RSColor().blackColor()
         doSomething()
-        tableViewRagers.createRagers()
-        tableViewRagers.delegate = self.tableViewRagers
-        tableViewRagers.dataSource = self.tableViewRagers
-  }
-  
-  // MARK: Do something
+        createRagers()
+        ragerSearch = ragersList
+        tableViewRagers.delegate = self
+        tableViewRagers.dataSource = self
+    }
+    
+    // MARK: Do something
     private func setupSearchBar() {
         if let textFieldSearchBar = searchRagers.value(forKey: "searchField") as? UITextField {
             textFieldSearchBar.textColor = .white
         }
     }
     
-  func doSomething() {
-    let request = Ragers.Something.Request()
-    interactor?.doSomething(request: request)
-    self.navigationController?.setNavigationBarHidden(false, animated: false)
-    setupSearchBar()
-  }
-
+    func doSomething() {
+        let request = Ragers.Something.Request()
+        interactor?.doSomething(request: request)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        setupSearchBar()
+    }
+    
 }
+
+extension RagersViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return ragerSearch.count
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = Bundle.main.loadNibNamed("TableViewCell", owner: self, options: nil)?.first as! TableViewCell
+        
+            cell.imageUser.image = ragerSearch[indexPath.row].image
+            cell.imageUser.makeRounded()
+            cell.labelName.text = ragerSearch[indexPath.row].name
+            cell.labelGame.text = ragerSearch[indexPath.row].game
+            cell.labelRages.text = ragerSearch[indexPath.row].rages
+        
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 88
+    }
+    
+}
+
+extension RagersViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        ragerSearch = []
+        
+        if searchText == "" {
+            ragerSearch = ragersList
+        } else {
+            for rager in ragersList {
+                if rager.name.lowercased().contains(searchText.lowercased()) {
+                    
+                    ragerSearch.append(rager)
+                }
+            }
+        }
+        
+        tableViewRagers.reloadData()
+    }
+}
+
+extension RagersViewController {
+    private func setupDataSource(_ image: UIImage?, _ name: String, _ game: String, _ rages: String) {
+        ragersList.append(Ragers.Rager(image: image, name: name, game: "Jogo: \(game)", rages: "\(rages) Rages em partidas"))
+    }
+    
+    public func createRagers() {
+        setupDataSource(UIImage(named: "borges"), "Guilherme Borges", "Valorant", "22")
+        setupDataSource(UIImage(named: "mussi"), "Bruna Mussi", "Valorant", "10")
+        setupDataSource(UIImage(named: "yuji"), "Lucas Yuji", "League Of Legends", "10")
+        
+    }
+}
+
+
+

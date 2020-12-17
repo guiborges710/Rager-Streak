@@ -14,23 +14,23 @@ import UIKit
 
 enum Ragers
 {
-  // MARK: Use cases
-  struct CellData {
-      let image: UIImage!
-      let name: String!
-      let game: String!
-      let rages: String!
-  }
-  enum Something
-  {
-    struct Request
-    {
+    // MARK: Use cases
+    struct Rager {
+        let image: UIImage!
+        let name: String!
+        let game: String!
+        let rages: String!
     }
-    struct Response
+    enum Something
     {
+        struct Request
+        {
+        }
+        struct Response
+        {
+        }
+        struct ViewModel
+        {
+        }
     }
-    struct ViewModel
-    {
-    }
-  }
 }
