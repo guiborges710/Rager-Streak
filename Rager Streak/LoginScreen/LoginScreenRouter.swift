@@ -1,5 +1,5 @@
 //
-//  SecondScreenRouter.swift
+//  LoginScreenRouter.swift
 //  Rager Streak
 //
 //  Created by guilherme.martinelli on 16/11/20.
@@ -12,20 +12,20 @@
 
 import UIKit
 
-@objc protocol SecondScreenRoutingLogic
+@objc protocol LoginScreenRoutingLogic
 {
     func routeToSuccess()
 }
 
-protocol SecondScreenDataPassing
+protocol LoginScreenDataPassing
 {
-    var dataStore: SecondScreenDataStore? { get }
+    var dataStore: LoginScreenDataStore? { get }
 }
 
-class SecondScreenRouter: NSObject, SecondScreenRoutingLogic, SecondScreenDataPassing
+class LoginScreenRouter: NSObject, LoginScreenRoutingLogic, LoginScreenDataPassing
 {
-    weak var viewController: SecondScreenViewController?
-    var dataStore: SecondScreenDataStore?
+    weak var viewController: LoginScreenViewController?
+    var dataStore: LoginScreenDataStore?
     
     func routeToSuccess() {
         let destination: HomeViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController

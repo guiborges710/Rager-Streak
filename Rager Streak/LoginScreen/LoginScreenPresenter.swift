@@ -12,15 +12,15 @@
 
 import UIKit
 
-protocol SecondScreenPresentationLogic
+protocol LoginScreenPresentationLogic
 {
     func setupButtonAndInputs()
 }
 
-class SecondScreenPresenter: SecondScreenPresentationLogic
+class LoginScreenPresenter: LoginScreenPresentationLogic
 {
     
-    weak var viewController: SecondScreenDisplayLogic?
+    weak var viewController: LoginScreenDisplayLogic?
     // MARK: Do something
     func setupButtonAndInputs() {
         //button
@@ -30,7 +30,7 @@ class SecondScreenPresenter: SecondScreenPresentationLogic
         let userPlaceHolder = createPlaceHolder(string: "Digite seu usuário", opacity: 0.9)
         let passwordPlaceHolder = createPlaceHolder(string: "Digite sua senha", opacity: 0.9)
         let viewModelInput = FirstScreen.Model.RSInput(userPlaceHolder: userPlaceHolder,
-                                                  passwordPlaceHolder: passwordPlaceHolder)
+                                                       passwordPlaceHolder: passwordPlaceHolder)
         viewController?.setupButtonAndInput(viewModelButton: viewModelButton,
                                             viewModelInput: viewModelInput)
     }

@@ -12,22 +12,22 @@
 
 import UIKit
 
-protocol SecondScreenBusinessLogic
+protocol LoginScreenBusinessLogic
 {
     func setupButtonAndInputs()
 }
 
-protocol SecondScreenDataStore
+protocol LoginScreenDataStore
 {
     var user: FirstScreen.Model.User? { get set }
 }
 
-class SecondScreenInteractor: SecondScreenBusinessLogic, SecondScreenDataStore
+class LoginScreenInteractor: LoginScreenBusinessLogic, LoginScreenDataStore
 {
     
     var user: FirstScreen.Model.User?
     
-    var presenter: SecondScreenPresentationLogic?
+    var presenter: LoginScreenPresentationLogic?
     
     // MARK: Do something
     func setupButtonAndInputs() {

@@ -27,6 +27,7 @@
 		6D26E8E325686A6000DB6771 /* ImageView+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D26E8E225686A6000DB6771 /* ImageView+Circle.swift */; };
 		6D4FD4162567003000DBD4A9 /* RSNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4FD4152567003000DBD4A9 /* RSNavigationBar.swift */; };
 		6D4FD419256708D200DBD4A9 /* RSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4FD418256708D200DBD4A9 /* RSViewController.swift */; };
+		6D887D8A258BA1E600354AF3 /* UIView+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D887D89258BA1E600354AF3 /* UIView+Circle.swift */; };
 		6D8CD6132562E392008BB608 /* FirstScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CD6122562E392008BB608 /* FirstScreenPresenter.swift */; };
 		6D8CD6152562E3B6008BB608 /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CD6142562E3B6008BB608 /* FirstScreenViewController.swift */; };
 		6D8CD6172562E3DA008BB608 /* FirstScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CD6162562E3DA008BB608 /* FirstScreenInteractor.swift */; };
@@ -34,10 +35,10 @@
 		6D8CD61C2562FACF008BB608 /* UILabel+ChangeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CD61B2562FACF008BB608 /* UILabel+ChangeText.swift */; };
 		6D8CD61E25630650008BB608 /* FirstScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CD61D25630650008BB608 /* FirstScreenRouter.swift */; };
 		6D8CD622256311C3008BB608 /* SecondScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D8CD621256311C3008BB608 /* SecondScreen.storyboard */; };
-		6D8CD6252563138C008BB608 /* SecondScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CD6242563138C008BB608 /* SecondScreenViewController.swift */; };
-		6D8CD62725631398008BB608 /* SecondScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CD62625631398008BB608 /* SecondScreenInteractor.swift */; };
-		6D8CD629256313A8008BB608 /* SecondScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CD628256313A8008BB608 /* SecondScreenPresenter.swift */; };
-		6D8CD62B256313BA008BB608 /* SecondScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CD62A256313BA008BB608 /* SecondScreenRouter.swift */; };
+		6D8CD6252563138C008BB608 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CD6242563138C008BB608 /* LoginScreenViewController.swift */; };
+		6D8CD62725631398008BB608 /* LoginScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CD62625631398008BB608 /* LoginScreenInteractor.swift */; };
+		6D8CD629256313A8008BB608 /* LoginScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CD628256313A8008BB608 /* LoginScreenPresenter.swift */; };
+		6D8CD62B256313BA008BB608 /* LoginScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CD62A256313BA008BB608 /* LoginScreenRouter.swift */; };
 		6DBD745C25892588007A3178 /* RSTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBD745B25892588007A3178 /* RSTabBarController.swift */; };
 		6DD1BE0D258A7BA500126B6C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD1BE08258A7BA500126B6C /* TableViewCell.swift */; };
 		6DD1BE0E258A7BA500126B6C /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DD1BE09258A7BA500126B6C /* TableViewCell.xib */; };
@@ -95,6 +96,7 @@
 		6D26E8E225686A6000DB6771 /* ImageView+Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Circle.swift"; sourceTree = "<group>"; };
 		6D4FD4152567003000DBD4A9 /* RSNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNavigationBar.swift; sourceTree = "<group>"; };
 		6D4FD418256708D200DBD4A9 /* RSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSViewController.swift; sourceTree = "<group>"; };
+		6D887D89258BA1E600354AF3 /* UIView+Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Circle.swift"; sourceTree = "<group>"; };
 		6D8CD6122562E392008BB608 /* FirstScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenPresenter.swift; sourceTree = "<group>"; };
 		6D8CD6142562E3B6008BB608 /* FirstScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenViewController.swift; sourceTree = "<group>"; };
 		6D8CD6162562E3DA008BB608 /* FirstScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenInteractor.swift; sourceTree = "<group>"; };
@@ -102,10 +104,10 @@
 		6D8CD61B2562FACF008BB608 /* UILabel+ChangeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+ChangeText.swift"; sourceTree = "<group>"; };
 		6D8CD61D25630650008BB608 /* FirstScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenRouter.swift; sourceTree = "<group>"; };
 		6D8CD621256311C3008BB608 /* SecondScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondScreen.storyboard; sourceTree = "<group>"; };
-		6D8CD6242563138C008BB608 /* SecondScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenViewController.swift; sourceTree = "<group>"; };
-		6D8CD62625631398008BB608 /* SecondScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenInteractor.swift; sourceTree = "<group>"; };
-		6D8CD628256313A8008BB608 /* SecondScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenPresenter.swift; sourceTree = "<group>"; };
-		6D8CD62A256313BA008BB608 /* SecondScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenRouter.swift; sourceTree = "<group>"; };
+		6D8CD6242563138C008BB608 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
+		6D8CD62625631398008BB608 /* LoginScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenInteractor.swift; sourceTree = "<group>"; };
+		6D8CD628256313A8008BB608 /* LoginScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenPresenter.swift; sourceTree = "<group>"; };
+		6D8CD62A256313BA008BB608 /* LoginScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenRouter.swift; sourceTree = "<group>"; };
 		6DBD745B25892588007A3178 /* RSTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSTabBarController.swift; sourceTree = "<group>"; };
 		6DD1BE08258A7BA500126B6C /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = ../../../../../../.Trash/TableViewCell.swift; sourceTree = "<group>"; };
 		6DD1BE09258A7BA500126B6C /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TableViewCell.xib; path = ../../../../../../.Trash/TableViewCell.xib; sourceTree = "<group>"; };
@@ -189,7 +191,7 @@
 				6DED97282589716E00E627CD /* Ragers */,
 				6D26E8D3256863AE00DB6771 /* Home */,
 				6D8CD6112562E36D008BB608 /* FirstScreen */,
-				6D8CD623256311E8008BB608 /* SecondScreen */,
+				6D8CD623256311E8008BB608 /* LoginScreen */,
 				6D8CD6182562EFEA008BB608 /* Models */,
 				6D0ADA18255990F000A6C3A6 /* Resources */,
 				6D4FD4172567087F00DBD4A9 /* Components */,
@@ -228,6 +230,7 @@
 				6D0ADA192559917E00A6C3A6 /* UIColor+Hex.swift */,
 				6D8CD61B2562FACF008BB608 /* UILabel+ChangeText.swift */,
 				6D26E8E225686A6000DB6771 /* ImageView+Circle.swift */,
+				6D887D89258BA1E600354AF3 /* UIView+Circle.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -283,15 +286,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		6D8CD623256311E8008BB608 /* SecondScreen */ = {
+		6D8CD623256311E8008BB608 /* LoginScreen */ = {
 			isa = PBXGroup;
 			children = (
-				6D8CD6242563138C008BB608 /* SecondScreenViewController.swift */,
-				6D8CD628256313A8008BB608 /* SecondScreenPresenter.swift */,
-				6D8CD62625631398008BB608 /* SecondScreenInteractor.swift */,
-				6D8CD62A256313BA008BB608 /* SecondScreenRouter.swift */,
+				6D8CD6242563138C008BB608 /* LoginScreenViewController.swift */,
+				6D8CD628256313A8008BB608 /* LoginScreenPresenter.swift */,
+				6D8CD62625631398008BB608 /* LoginScreenInteractor.swift */,
+				6D8CD62A256313BA008BB608 /* LoginScreenRouter.swift */,
 			);
-			path = SecondScreen;
+			path = LoginScreen;
 			sourceTree = "<group>";
 		};
 		6DD1BE07258A7B8700126B6C /* TableViewRagers */ = {
@@ -543,17 +546,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D8CD62725631398008BB608 /* SecondScreenInteractor.swift in Sources */,
+				6D8CD62725631398008BB608 /* LoginScreenInteractor.swift in Sources */,
 				6DED972A2589719200E627CD /* RagersViewController.swift in Sources */,
 				6D8CD61E25630650008BB608 /* FirstScreenRouter.swift in Sources */,
 				6D4FD419256708D200DBD4A9 /* RSViewController.swift in Sources */,
+				6D887D8A258BA1E600354AF3 /* UIView+Circle.swift in Sources */,
 				6D26E8D9256863EB00DB6771 /* HomeInteractor.swift in Sources */,
 				6DED972E258971B700E627CD /* RagersInteractor.swift in Sources */,
-				6D8CD62B256313BA008BB608 /* SecondScreenRouter.swift in Sources */,
+				6D8CD62B256313BA008BB608 /* LoginScreenRouter.swift in Sources */,
 				6D26E8D125685E3D00DB6771 /* RSColor.swift in Sources */,
 				6DED9733258971E100E627CD /* RagersModels.swift in Sources */,
 				6D26E8D5256863CF00DB6771 /* HomeViewController.swift in Sources */,
-				6D8CD629256313A8008BB608 /* SecondScreenPresenter.swift in Sources */,
+				6D8CD629256313A8008BB608 /* LoginScreenPresenter.swift in Sources */,
 				6DD1BE13258A83C600126B6C /* TableViewRagers.swift in Sources */,
 				6DEF99FB2566DB6600548A97 /* RSTextField.swift in Sources */,
 				6DBD745C25892588007A3178 /* RSTabBarController.swift in Sources */,
@@ -569,7 +573,7 @@
 				6D26E8D7256863DE00DB6771 /* HomePresenter.swift in Sources */,
 				6DED972C258971A200E627CD /* RagersPresenter.swift in Sources */,
 				6D26E8DB256863F600DB6771 /* HomeRouter.swift in Sources */,
-				6D8CD6252563138C008BB608 /* SecondScreenViewController.swift in Sources */,
+				6D8CD6252563138C008BB608 /* LoginScreenViewController.swift in Sources */,
 				6D8CD6172562E3DA008BB608 /* FirstScreenInteractor.swift in Sources */,
 				6D0AD9EB25598F6700A6C3A6 /* SceneDelegate.swift in Sources */,
 				6DED9730258971CA00E627CD /* RagersRouter.swift in Sources */,

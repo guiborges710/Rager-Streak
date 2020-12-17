@@ -23,10 +23,6 @@ class RSNavigationBar: UINavigationController {
         self.navigationBar.layoutIfNeeded()
         
     }
-    
-    
-
-    
 
 }
 

@@ -17,7 +17,7 @@ protocol HomeDisplayLogic: class
   func displaySomething(viewModel: Home.Something.ViewModel)
 }
 
-class HomeViewController: UIViewController, HomeDisplayLogic
+class HomeViewController: UIViewController, HomeDisplayLogic, UITabBarDelegate
 {
     var interactor: HomeBusinessLogic?
     var router: (NSObjectProtocol & HomeRoutingLogic & HomeDataPassing)?
@@ -67,9 +67,9 @@ class HomeViewController: UIViewController, HomeDisplayLogic
     self.title = "Travis Scott"
     self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
     setupNavBar()
-    setupViews(circleView: viewRages, color: RSColor().purpleColor())
-    setupViews(circleView: viewDefeats, color: RSColor().redColor())
-    setupViews(circleView: viewVictories, color: RSColor().greenColor())
+    viewRages.setupViews(circleView: viewRages, color: RSColor().purpleColor())
+    viewDefeats.setupViews(circleView: viewDefeats, color: RSColor().redColor())
+    viewVictories.setupViews(circleView: viewVictories, color: RSColor().greenColor())
 
     userImage.makeRounded()
     doSomething()
@@ -92,12 +92,9 @@ class HomeViewController: UIViewController, HomeDisplayLogic
         //nameTextField.text = viewModel.name
     }
     
-    func setupViews(circleView: UIView, color: UIColor) {
-        circleView.layer.cornerRadius = 41
-        circleView.layer.borderColor = color.cgColor
-        circleView.layer.borderWidth = 2
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        print("teste")
     }
-    
 }
 
 extension HomeViewController {

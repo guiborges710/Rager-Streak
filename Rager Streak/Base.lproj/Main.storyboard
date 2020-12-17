@@ -247,12 +247,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="crn-CH-erl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1626" y="179"/>
+            <point key="canvasLocation" x="-175" y="157"/>
         </scene>
         <!--Ragers View Controller-->
         <scene sceneID="8My-YW-kiK">
             <objects>
-                <viewController id="CQI-5Y-IhC" customClass="RagersViewController" customModule="Rager_Streak" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RagersViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CQI-5Y-IhC" customClass="RagersViewController" customModule="Rager_Streak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="smm-cM-6O4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -324,7 +324,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Tvh-So-hMO"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="tabPeople" id="blX-Jn-kcp"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="" image="tabPeople" id="blX-Jn-kcp"/>
                     <navigationItem key="navigationItem" id="2dB-4d-3dZ"/>
                     <connections>
                         <outlet property="searchRagers" destination="yXd-iu-4tD" id="zPg-hm-MsV"/>
@@ -333,7 +333,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eER-Td-60A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-791.304347826087" y="178.79464285714286"/>
+            <point key="canvasLocation" x="-1255" y="157"/>
         </scene>
     </scenes>
     <resources>

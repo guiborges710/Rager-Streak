@@ -14,7 +14,7 @@ import UIKit
 
 protocol RagersPresentationLogic
 {
-  func presentSomething(response: Ragers.Something.Response)
+
 }
 
 class RagersPresenter: RagersPresentationLogic
@@ -22,10 +22,5 @@ class RagersPresenter: RagersPresentationLogic
   weak var viewController: RagersDisplayLogic?
   
   // MARK: Do something
-  
-  func presentSomething(response: Ragers.Something.Response)
-  {
-    let viewModel = Ragers.Something.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
-  }
+
 }

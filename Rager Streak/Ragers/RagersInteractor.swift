@@ -31,8 +31,6 @@ class RagersInteractor: RagersBusinessLogic, RagersDataStore
   
   func doSomething(request: Ragers.Something.Request)
   {
-    
-    let response = Ragers.Something.Response()
-    presenter?.presentSomething(response: response)
+
   }
 }

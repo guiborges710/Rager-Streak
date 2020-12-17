@@ -28,7 +28,7 @@ class FirstScreenRouter: NSObject, FirstScreenRoutingLogic, FirstScreenDataPassi
     var dataStore: FirstScreenDataStore?
     
     func routeToSuccess() {
-        let destination: SecondScreenViewController = UIStoryboard(name: "SecondScreen", bundle: nil).instantiateViewController(withIdentifier: "SecondScreenViewController") as! SecondScreenViewController
+        let destination: LoginScreenViewController = UIStoryboard(name: "SecondScreen", bundle: nil).instantiateViewController(withIdentifier: "LoginScreenViewController") as! LoginScreenViewController
 
         var destinationDS = destination.router?.dataStore
         passData(dataSource: dataStore, destination: &destinationDS)
@@ -36,7 +36,7 @@ class FirstScreenRouter: NSObject, FirstScreenRoutingLogic, FirstScreenDataPassi
     }
     
     private func passData(dataSource: FirstScreenDataStore?,
-                          destination: inout SecondScreenDataStore?) {
+                          destination: inout LoginScreenDataStore?) {
         destination?.user = dataSource?.user
     }
 }

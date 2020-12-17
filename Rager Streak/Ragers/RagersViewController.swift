@@ -13,7 +13,7 @@
 import UIKit
 
 protocol RagersDisplayLogic: class {
-  func displaySomething(viewModel: Ragers.Something.ViewModel)
+
 }
 
 class RagersViewController: UIViewController, RagersDisplayLogic {
@@ -51,13 +51,11 @@ class RagersViewController: UIViewController, RagersDisplayLogic {
   }
   
   // MARK: View lifecycle
-//  var arrayOfCellData = [Ragers.CellData]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        doSomething()
-        
         self.view.backgroundColor = RSColor().blackColor()
-        
+        doSomething()
         tableViewRagers.createRagers()
         tableViewRagers.delegate = self.tableViewRagers
         tableViewRagers.dataSource = self.tableViewRagers
@@ -68,7 +66,6 @@ class RagersViewController: UIViewController, RagersDisplayLogic {
         if let textFieldSearchBar = searchRagers.value(forKey: "searchField") as? UITextField {
             textFieldSearchBar.textColor = .white
         }
-        
     }
     
   func doSomething() {
@@ -77,9 +74,5 @@ class RagersViewController: UIViewController, RagersDisplayLogic {
     self.navigationController?.setNavigationBarHidden(false, animated: false)
     setupSearchBar()
   }
-  
-  func displaySomething(viewModel: Ragers.Something.ViewModel)
-  {
-    //nameTextField.text = viewModel.name
-  }
+
 }

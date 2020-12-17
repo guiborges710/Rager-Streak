@@ -12,17 +12,17 @@
 
 import UIKit
 
-protocol SecondScreenDisplayLogic: class {
+protocol LoginScreenDisplayLogic: class {
     func setupButtonAndInput(viewModelButton: FirstScreen.Model.RSButton, viewModelInput: FirstScreen.Model.RSInput)
 }
 
-class SecondScreenViewController: UIViewController, SecondScreenDisplayLogic {
+class LoginScreenViewController: UIViewController, LoginScreenDisplayLogic {
     
     @IBOutlet weak var inputUser: RSTextField!
     @IBOutlet weak var inputPassword: RSTextField!
     @IBOutlet weak var buttonLogin: UIButton!
-    var interactor: SecondScreenBusinessLogic?
-    var router: (NSObjectProtocol & SecondScreenRoutingLogic & SecondScreenDataPassing)?
+    var interactor: LoginScreenBusinessLogic?
+    var router: (NSObjectProtocol & LoginScreenRoutingLogic & LoginScreenDataPassing)?
     
     // MARK: View lifecycle
     override func viewDidLoad() {
@@ -49,16 +49,16 @@ class SecondScreenViewController: UIViewController, SecondScreenDisplayLogic {
         setup()
     }
     
-    func routeToSecondScreen() {
+    func routeToLoginScreen() {
         router?.routeToSuccess()
     }
     
     // MARK: Setup
     private func setup() {
         let viewController = self
-        let interactor = SecondScreenInteractor()
-        let presenter = SecondScreenPresenter()
-        let router = SecondScreenRouter()
+        let interactor = LoginScreenInteractor()
+        let presenter = LoginScreenPresenter()
+        let router = LoginScreenRouter()
         viewController.interactor = interactor
         viewController.router = router
         interactor.presenter = presenter
@@ -75,6 +75,6 @@ class SecondScreenViewController: UIViewController, SecondScreenDisplayLogic {
         inputPassword.attributedPlaceholder = viewModelInput.passwordPlaceHolder
     }
     @IBAction func login(_ sender: Any) {
-        routeToSecondScreen()
+        routeToLoginScreen()
     }
 }
