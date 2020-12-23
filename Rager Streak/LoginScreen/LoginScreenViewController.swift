@@ -13,7 +13,7 @@
 import UIKit
 
 protocol LoginScreenDisplayLogic: class {
-    func setupButtonAndInput(viewModelButton: FirstScreen.Model.RSButton, viewModelInput: FirstScreen.Model.RSInput)
+    func setupInput(viewModelInput: FirstScreen.Model.RSInput)
 }
 
 class LoginScreenViewController: UIViewController, LoginScreenDisplayLogic {
@@ -67,10 +67,7 @@ class LoginScreenViewController: UIViewController, LoginScreenDisplayLogic {
         router.dataStore = interactor
     }
     
-    func setupButtonAndInput(viewModelButton: FirstScreen.Model.RSButton,
-                             viewModelInput: FirstScreen.Model.RSInput) {
-        buttonLogin.layer.borderWidth = viewModelButton.borderWidth
-        buttonLogin.layer.borderColor = viewModelButton.borderColor
+    func setupInput(viewModelInput: FirstScreen.Model.RSInput) {
         inputUser.attributedPlaceholder = viewModelInput.userPlaceHolder
         inputPassword.attributedPlaceholder = viewModelInput.passwordPlaceHolder
     }

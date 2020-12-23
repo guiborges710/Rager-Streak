@@ -14,7 +14,7 @@ import UIKit
 
 protocol FirstScreenBusinessLogic
 {
-    func setupButton()
+
 }
 
 protocol FirstScreenDataStore {
@@ -27,8 +27,5 @@ class FirstScreenInteractor: FirstScreenBusinessLogic, FirstScreenDataStore {
     var presenter: FirstScreenPresentationLogic?
 
     // MARK: Do something
-    func setupButton() {
-        presenter?.setupButton()
-    }
   
 }

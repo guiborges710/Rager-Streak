@@ -10,12 +10,12 @@
         <!--title-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="FirstScreenViewController" customModule="Rager_Streak" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstScreenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="FirstScreenViewController" customModule="Rager_Streak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8E-Yu-cqf">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8E-Yu-cqf" customClass="RSButton" customModule="Rager_Streak" customModuleProvider="target">
                                 <rect key="frame" x="41.5" y="685.5" width="331" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="331" id="6Dt-h9-2ym"/>
@@ -113,7 +113,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="CRp-ze-Wcd" kind="relationship" relationship="viewControllers" id="Syw-z0-Z18"/>
-                        <segue destination="CQI-5Y-IhC" kind="relationship" relationship="viewControllers" id="A1v-7I-7im"/>
+                        <segue destination="E1L-F8-8Cd" kind="relationship" relationship="viewControllers" id="A1v-7I-7im"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tis-k3-A18" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -247,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="crn-CH-erl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-175" y="157"/>
+            <point key="canvasLocation" x="593" y="157"/>
         </scene>
         <!--Ragers View Controller-->
         <scene sceneID="8My-YW-kiK">
@@ -257,35 +257,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aap-aW-yhA">
-                                <rect key="frame" x="20" y="44" width="374" height="51"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ragers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2D-Gn-qfG">
-                                        <rect key="frame" x="152" y="11.5" width="70" height="28"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBy-wr-f8r">
-                                        <rect key="frame" x="334" y="5.5" width="40" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="60g-pM-8jG"/>
-                                            <constraint firstAttribute="width" constant="40" id="SuQ-XN-do5"/>
-                                        </constraints>
-                                        <state key="normal" image="navAddButton"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="l2D-Gn-qfG" firstAttribute="centerX" secondItem="aap-aW-yhA" secondAttribute="centerX" id="6PL-d3-wkJ"/>
-                                    <constraint firstItem="SBy-wr-f8r" firstAttribute="centerY" secondItem="aap-aW-yhA" secondAttribute="centerY" id="ZG2-XU-Kok"/>
-                                    <constraint firstAttribute="trailing" secondItem="SBy-wr-f8r" secondAttribute="trailing" id="tCO-7Q-fJr"/>
-                                    <constraint firstAttribute="height" constant="51" id="vMc-9T-rrI"/>
-                                    <constraint firstItem="l2D-Gn-qfG" firstAttribute="centerY" secondItem="aap-aW-yhA" secondAttribute="centerY" id="wxs-pJ-gkG"/>
-                                </constraints>
-                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="n0M-wI-7uy" customClass="TableViewRagers" customModule="Rager_Streak" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="156" width="414" height="657"/>
+                                <rect key="frame" x="0.0" y="154" width="414" height="659"/>
                                 <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -302,7 +275,7 @@
                                 </prototypes>
                             </tableView>
                             <searchBar contentMode="redraw" placeholder="Buscar ragers..." translatesAutoresizingMaskIntoConstraints="NO" id="yXd-iu-4tD">
-                                <rect key="frame" x="20" y="120" width="374" height="56"/>
+                                <rect key="frame" x="20" y="118" width="374" height="56"/>
                                 <color key="barTintColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -312,22 +285,17 @@
                         </subviews>
                         <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="aap-aW-yhA" firstAttribute="centerX" secondItem="smm-cM-6O4" secondAttribute="centerX" id="87K-tM-rEw"/>
                             <constraint firstItem="n0M-wI-7uy" firstAttribute="top" secondItem="yXd-iu-4tD" secondAttribute="bottom" constant="-20" id="Few-b1-Mmc"/>
                             <constraint firstItem="Tvh-So-hMO" firstAttribute="trailing" secondItem="yXd-iu-4tD" secondAttribute="trailing" constant="20" id="GBA-gQ-xVB"/>
                             <constraint firstItem="yXd-iu-4tD" firstAttribute="leading" secondItem="Tvh-So-hMO" secondAttribute="leading" constant="20" id="K6l-Z7-HbF"/>
-                            <constraint firstItem="yXd-iu-4tD" firstAttribute="top" secondItem="aap-aW-yhA" secondAttribute="bottom" constant="25" id="Tsr-oc-aem"/>
                             <constraint firstItem="yXd-iu-4tD" firstAttribute="centerX" secondItem="smm-cM-6O4" secondAttribute="centerX" id="VcM-Iv-sfZ"/>
                             <constraint firstItem="n0M-wI-7uy" firstAttribute="trailing" secondItem="Tvh-So-hMO" secondAttribute="trailing" id="aRb-ND-7za"/>
-                            <constraint firstItem="aap-aW-yhA" firstAttribute="leading" secondItem="Tvh-So-hMO" secondAttribute="leading" constant="20" id="kFF-sh-pkF"/>
+                            <constraint firstItem="yXd-iu-4tD" firstAttribute="top" secondItem="Tvh-So-hMO" secondAttribute="top" constant="30" id="e4n-Nq-mGg"/>
                             <constraint firstItem="n0M-wI-7uy" firstAttribute="bottom" secondItem="Tvh-So-hMO" secondAttribute="bottom" id="kXr-tQ-oap"/>
-                            <constraint firstItem="Tvh-So-hMO" firstAttribute="trailing" secondItem="aap-aW-yhA" secondAttribute="trailing" constant="20" id="mhF-wT-mNx"/>
-                            <constraint firstItem="aap-aW-yhA" firstAttribute="top" secondItem="Tvh-So-hMO" secondAttribute="top" id="yBA-CZ-ZeA"/>
                             <constraint firstItem="n0M-wI-7uy" firstAttribute="leading" secondItem="Tvh-So-hMO" secondAttribute="leading" id="yCF-l8-YwG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Tvh-So-hMO"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="1" title="" image="tabPeople" id="blX-Jn-kcp"/>
                     <navigationItem key="navigationItem" id="2dB-4d-3dZ"/>
                     <connections>
                         <outlet property="searchRagers" destination="yXd-iu-4tD" id="zPg-hm-MsV"/>
@@ -336,12 +304,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eER-Td-60A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1255" y="157"/>
+            <point key="canvasLocation" x="-175" y="157"/>
+        </scene>
+        <!--Navigation Bar-->
+        <scene sceneID="gPm-du-yAg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E1L-F8-8Cd" customClass="RSNavigationBar" customModule="Rager_Streak" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="1" title="" image="tabPeople" id="blX-Jn-kcp"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dzz-hQ-XwL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CQI-5Y-IhC" kind="relationship" relationship="rootViewController" id="1eQ-UL-88w"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a2m-6r-upm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1255.072463768116" y="156.69642857142856"/>
         </scene>
     </scenes>
     <resources>
         <image name="icon" width="109" height="132"/>
-        <image name="navAddButton" width="40" height="40"/>
         <image name="tabHome" width="34.5" height="33"/>
         <image name="tabPeople" width="43" height="25.5"/>
         <image name="travis" width="800" height="1000"/>

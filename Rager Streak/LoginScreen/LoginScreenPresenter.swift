@@ -23,20 +23,12 @@ class LoginScreenPresenter: LoginScreenPresentationLogic
     weak var viewController: LoginScreenDisplayLogic?
     // MARK: Do something
     func setupButtonAndInputs() {
-        //button
-        let color = UIColor(hexString: "7A4DDF").cgColor
-        let viewModelButton = FirstScreen.Model.RSButton(borderColor: color, borderWidth: 1)
         //inputs
-        let userPlaceHolder = createPlaceHolder(string: "Digite seu usuário", opacity: 0.9)
-        let passwordPlaceHolder = createPlaceHolder(string: "Digite sua senha", opacity: 0.9)
+        let userPlaceHolder = RSTextField().setPlaceHolderColor(string: "Digite seu usuário", opacity: 0.9)
+        let passwordPlaceHolder = RSTextField().setPlaceHolderColor(string: "Digite sua senha", opacity: 0.9)
         let viewModelInput = FirstScreen.Model.RSInput(userPlaceHolder: userPlaceHolder,
                                                        passwordPlaceHolder: passwordPlaceHolder)
-        viewController?.setupButtonAndInput(viewModelButton: viewModelButton,
-                                            viewModelInput: viewModelInput)
+        viewController?.setupInput(viewModelInput: viewModelInput)
     }
-    
-    private func createPlaceHolder(string: String, opacity: CGFloat) -> NSAttributedString {
-        let placeHolder = NSAttributedString(string: string, attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray.withAlphaComponent(opacity)])
-        return placeHolder
-    }
+
 }

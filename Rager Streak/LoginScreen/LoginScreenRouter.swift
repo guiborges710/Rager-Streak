@@ -30,7 +30,6 @@ class LoginScreenRouter: NSObject, LoginScreenRoutingLogic, LoginScreenDataPassi
     func routeToSuccess() {
         let destination: HomeViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         
-//        var destinationDS = destination.router?.dataStore
         viewController?.navigationController?.pushViewController(destination, animated: true)
     }
 }

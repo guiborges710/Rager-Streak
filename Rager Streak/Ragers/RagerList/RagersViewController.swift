@@ -24,6 +24,7 @@ class RagersViewController: UIViewController, RagersDisplayLogic {
     var router: (NSObjectProtocol & RagersRoutingLogic & RagersDataPassing)?
     var ragerSearch = [Ragers.Rager]()
     var ragersList = [Ragers.Rager]()
+
     // MARK: Object lifecycle
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -58,9 +59,17 @@ class RagersViewController: UIViewController, RagersDisplayLogic {
         self.view.backgroundColor = RSColor().blackColor()
         doSomething()
         createRagers()
+        setupNavBar()
+//        self.title = "Ragers"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        self.tabBarController?.tabBar.isHidden = false
         ragerSearch = ragersList
         tableViewRagers.delegate = self
         tableViewRagers.dataSource = self
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     // MARK: Do something
@@ -76,6 +85,9 @@ class RagersViewController: UIViewController, RagersDisplayLogic {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         setupSearchBar()
     }
+    @IBAction func presentNewRager(_ sender: Any) {
+        router?.routeToSuccess()
+    }
     
 }
 
@@ -88,11 +100,11 @@ extension RagersViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = Bundle.main.loadNibNamed("TableViewCell", owner: self, options: nil)?.first as! TableViewCell
         
-            cell.imageUser.image = ragerSearch[indexPath.row].image
-            cell.imageUser.makeRounded()
-            cell.labelName.text = ragerSearch[indexPath.row].name
-            cell.labelGame.text = ragerSearch[indexPath.row].game
-            cell.labelRages.text = ragerSearch[indexPath.row].rages
+        cell.imageUser.image = ragerSearch[indexPath.row].image
+        cell.imageUser.makeRounded()
+        cell.labelName.text = ragerSearch[indexPath.row].name
+        cell.labelGame.text = ragerSearch[indexPath.row].game
+        cell.labelRages.text = ragerSearch[indexPath.row].rages
         
         
         return cell
@@ -134,7 +146,7 @@ extension RagersViewController {
         setupDataSource(UIImage(named: "yuji"), "Lucas Yuji", "League Of Legends", "10")
         
     }
+    func setupNavBar() {
+        self.navigationItem.rightBarButtonItem = self.navigationController?.setupAddButtonNavBar()
+    }
 }
-
-
-

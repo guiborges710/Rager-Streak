@@ -58,7 +58,10 @@ class HomeViewController: UIViewController, HomeDisplayLogic, UITabBarDelegate
   }
   
   // MARK: View lifecycle
-  
+  override func viewWillDisappear(_ animated: Bool) {
+      super.viewWillDisappear(true)
+      self.navigationController?.setNavigationBarHidden(false, animated: true)
+  }
   override func viewDidLoad()
   {
     super.viewDidLoad()
@@ -74,6 +77,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic, UITabBarDelegate
     userImage.makeRounded()
     doSomething()
     tabBarController?.tabBar.isHidden = false
+
     }
 
     override func viewDidAppear(_ animated: Bool) {

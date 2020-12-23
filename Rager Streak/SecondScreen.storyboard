@@ -47,7 +47,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGZ-ff-1Cn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGZ-ff-1Cn" customClass="RSButton" customModule="Rager_Streak" customModuleProvider="target">
                                 <rect key="frame" x="41.5" y="483.5" width="331" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="U99-Rx-TgJ"/>

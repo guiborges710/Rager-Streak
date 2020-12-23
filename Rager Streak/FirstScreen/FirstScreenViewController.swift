@@ -14,7 +14,6 @@ import UIKit
 
 protocol FirstScreenDisplayLogic: class {
     func routeToSecondScreen()
-    func setupButton(buttonViewModel: FirstScreen.Model.RSButton)
 }
 
 class FirstScreenViewController: UIViewController, FirstScreenDisplayLogic {
@@ -56,21 +55,16 @@ class FirstScreenViewController: UIViewController, FirstScreenDisplayLogic {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         view.backgroundColor = UIColor(hexString: "131313")
         tabBarController?.tabBar.isHidden = true
-        interactor?.setupButton()
         
     }
     override func viewWillAppear(_ animated: Bool) {
         
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+        self.tabBarController?.tabBar.isHidden = true
     }
     // MARK: Do something
     func routeToSecondScreen() {
         router?.routeToSuccess()
-    }
-    
-    func setupButton(buttonViewModel: FirstScreen.Model.RSButton) {
-        buttonReady.layer.borderColor = buttonViewModel.borderColor
-        buttonReady.layer.borderWidth = buttonViewModel.borderWidth
     }
     
     func passwordIncorrect(textFieldViewModel: FirstScreen.Model.LabelViewModel) {

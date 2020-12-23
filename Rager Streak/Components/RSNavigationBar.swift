@@ -21,7 +21,6 @@ class RSNavigationBar: UINavigationController {
         self.navigationBar.setBackgroundImage(UIImage(), for:.default)
         self.navigationBar.shadowImage = UIImage()
         self.navigationBar.layoutIfNeeded()
-        
     }
 
 }
@@ -35,6 +34,13 @@ extension UINavigationController {
     @objc
     func actionEditButton(sender: UIBarButtonItem) {
         popViewController(animated: true)
+    }
+    
+    @objc
+    func actionAddButton(sender: UIBarButtonItem) {
+        let destination: NewRagerViewController = UIStoryboard(name: "NewRager", bundle: nil).instantiateViewController(withIdentifier: "NewRagerViewController") as! NewRagerViewController
+
+        self.pushViewController(destination, animated: true)
     }
     
     public func setupRightButtonNavBar() -> UIBarButtonItem {
@@ -55,6 +61,17 @@ extension UINavigationController {
                                           target: self,
                                           action: #selector(self.actionBackButton))
         return leftButton
+    }
+    
+    public func setupAddButtonNavBar() -> UIBarButtonItem {
+        let img = UIImage(named: "navAddButton")!.withRenderingMode(.alwaysOriginal)
+        let addButton = UIBarButtonItem(image: img,
+                                          style: UIBarButtonItem.Style.plain,
+                                          target: self,
+                                          action: #selector(self.actionAddButton))
+        
+        return addButton
+
     }
     
 }

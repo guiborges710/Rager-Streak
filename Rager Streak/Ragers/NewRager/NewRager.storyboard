@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New Rager View Controller-->
+        <scene sceneID="MR4-99-mTF">
+            <objects>
+                <viewController storyboardIdentifier="NewRagerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dv3-7A-TJg" customClass="NewRagerViewController" customModule="Rager_Streak" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RUJ-6B-2bB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digite o nome do Rager" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLw-iR-z52">
+                                <rect key="frame" x="96" y="364" width="222" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IGG-ff-vsX" customClass="RSTextField" customModule="Rager_Streak" customModuleProvider="target">
+                                <rect key="frame" x="41.5" y="401" width="331" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="331" id="bx2-0q-yxe"/>
+                                    <constraint firstAttribute="height" constant="53" id="iTb-yC-TOh"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeHolderLabel.textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dt-fr-fef" customClass="RSButton" customModule="Rager_Streak" customModuleProvider="target">
+                                <rect key="frame" x="41.5" y="769" width="331" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="331" id="4eo-fZ-TfH"/>
+                                    <constraint firstAttribute="height" constant="53" id="gOY-kf-zxl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Continuar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextScreen:" destination="Dv3-7A-TJg" eventType="touchUpInside" id="hxO-Jt-PJI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="IGG-ff-vsX" firstAttribute="centerX" secondItem="RUJ-6B-2bB" secondAttribute="centerX" id="XIb-YV-zmX"/>
+                            <constraint firstItem="yLw-iR-z52" firstAttribute="top" secondItem="GNz-A6-30d" secondAttribute="top" constant="320" id="chR-ex-Y04"/>
+                            <constraint firstItem="GNz-A6-30d" firstAttribute="bottom" secondItem="3dt-fr-fef" secondAttribute="bottom" constant="40" id="cui-4u-ap4"/>
+                            <constraint firstItem="3dt-fr-fef" firstAttribute="centerX" secondItem="RUJ-6B-2bB" secondAttribute="centerX" id="dum-0D-bs1"/>
+                            <constraint firstItem="yLw-iR-z52" firstAttribute="centerX" secondItem="RUJ-6B-2bB" secondAttribute="centerX" id="lVh-Zz-NVX"/>
+                            <constraint firstItem="IGG-ff-vsX" firstAttribute="top" secondItem="yLw-iR-z52" secondAttribute="bottom" constant="10" id="vnn-jG-gHT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GNz-A6-30d"/>
+                    </view>
+                    <connections>
+                        <outlet property="inputName" destination="IGG-ff-vsX" id="nVK-Vx-V8x"/>
+                        <outlet property="labelCustom" destination="yLw-iR-z52" id="7cL-2n-XPE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aBa-3h-5rz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-200" y="62"/>
+        </scene>
+        <!--New Rager Game View Controller-->
+        <scene sceneID="2th-1A-f7e">
+            <objects>
+                <viewController storyboardIdentifier="NewRagerGameViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pKt-AO-5gA" customClass="NewRagerGameViewController" customModule="Rager_Streak" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1vu-cv-m6f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digite o jogo específico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KI-BC-ac6">
+                                <rect key="frame" x="96" y="364" width="222" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CsF-xi-NwU" customClass="RSTextField" customModule="Rager_Streak" customModuleProvider="target">
+                                <rect key="frame" x="41.5" y="401" width="331" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="Az8-fj-NKX"/>
+                                    <constraint firstAttribute="width" constant="331" id="c38-DK-KtK"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeHolderLabel.textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHO-na-Jo3" customClass="RSButton" customModule="Rager_Streak" customModuleProvider="target">
+                                <rect key="frame" x="41.5" y="769" width="331" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="9BX-Ib-Uzl"/>
+                                    <constraint firstAttribute="width" constant="331" id="Zlk-Ah-8vS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Continuar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextScreen:" destination="pKt-AO-5gA" eventType="touchUpInside" id="Yho-Ei-eo6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="iHO-na-Jo3" firstAttribute="centerX" secondItem="1vu-cv-m6f" secondAttribute="centerX" id="Ckw-Sa-oUe"/>
+                            <constraint firstItem="6KI-BC-ac6" firstAttribute="centerX" secondItem="1vu-cv-m6f" secondAttribute="centerX" id="KsK-jq-p11"/>
+                            <constraint firstItem="uyE-m5-y1Z" firstAttribute="bottom" secondItem="iHO-na-Jo3" secondAttribute="bottom" constant="40" id="bQw-FD-0Vb"/>
+                            <constraint firstItem="CsF-xi-NwU" firstAttribute="top" secondItem="6KI-BC-ac6" secondAttribute="bottom" constant="10" id="hrG-Qg-mp8"/>
+                            <constraint firstItem="6KI-BC-ac6" firstAttribute="top" secondItem="uyE-m5-y1Z" secondAttribute="top" constant="320" id="qgn-jE-TDh"/>
+                            <constraint firstItem="CsF-xi-NwU" firstAttribute="centerX" secondItem="1vu-cv-m6f" secondAttribute="centerX" id="sAl-AL-JNt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uyE-m5-y1Z"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1sg-md-6wt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="709" y="62"/>
+        </scene>
+    </scenes>
+</document>

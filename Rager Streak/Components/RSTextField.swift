@@ -44,4 +44,9 @@ class RSTextField: UITextField, UITextFieldDelegate{
     func movePlaceholderDown(){
         border.borderColor = UIColor(hexString: "7A4DDF").cgColor
     }
+    public func setPlaceHolderColor(string: String, opacity: CGFloat) -> NSAttributedString {
+        let placeHolder = NSAttributedString(string: string, attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray.withAlphaComponent(opacity)])
+        return placeHolder
+    }
+    
 }
