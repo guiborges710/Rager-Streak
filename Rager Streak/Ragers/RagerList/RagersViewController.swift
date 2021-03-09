@@ -66,6 +66,7 @@ class RagersViewController: UIViewController, RagersDisplayLogic {
         ragerSearch = ragersList
         tableViewRagers.delegate = self
         tableViewRagers.dataSource = self
+        tableViewRagers.separatorStyle = .none
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -99,7 +100,7 @@ extension RagersViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = Bundle.main.loadNibNamed("TableViewCell", owner: self, options: nil)?.first as! TableViewCell
-        
+        cell.backgroundColor = RSColor().blackColor()
         cell.imageUser.image = ragerSearch[indexPath.row].image
         cell.imageUser.makeRounded()
         cell.labelName.text = ragerSearch[indexPath.row].name

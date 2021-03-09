@@ -46,15 +46,15 @@
 		6DB7105425925C3C0003783F /* RSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB7105325925C3C0003783F /* RSButton.swift */; };
 		6DB7105B2592702D0003783F /* NewRagerGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB7105A2592702D0003783F /* NewRagerGameViewController.swift */; };
 		6DBD745C25892588007A3178 /* RSTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBD745B25892588007A3178 /* RSTabBarController.swift */; };
-		6DD1BE0D258A7BA500126B6C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD1BE08258A7BA500126B6C /* TableViewCell.swift */; };
-		6DD1BE0E258A7BA500126B6C /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DD1BE09258A7BA500126B6C /* TableViewCell.xib */; };
-		6DD1BE13258A83C600126B6C /* TableViewRagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD1BE12258A83C600126B6C /* TableViewRagers.swift */; };
 		6DED972A2589719200E627CD /* RagersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DED97292589719200E627CD /* RagersViewController.swift */; };
 		6DED972C258971A200E627CD /* RagersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DED972B258971A200E627CD /* RagersPresenter.swift */; };
 		6DED972E258971B700E627CD /* RagersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DED972D258971B700E627CD /* RagersInteractor.swift */; };
 		6DED9730258971CA00E627CD /* RagersRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DED972F258971CA00E627CD /* RagersRouter.swift */; };
 		6DED9733258971E100E627CD /* RagersModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DED9732258971E100E627CD /* RagersModels.swift */; };
 		6DEF99FB2566DB6600548A97 /* RSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEF99FA2566DB6600548A97 /* RSTextField.swift */; };
+		6DF4069725F7F7990034508A /* TableViewRagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4069625F7F7990034508A /* TableViewRagers.swift */; };
+		6DF4069F25F7F7AC0034508A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4069E25F7F7AC0034508A /* TableViewCell.swift */; };
+		6DF406A425F7F8230034508A /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DF406A325F7F8230034508A /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,15 +121,15 @@
 		6DB7105325925C3C0003783F /* RSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSButton.swift; sourceTree = "<group>"; };
 		6DB7105A2592702D0003783F /* NewRagerGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRagerGameViewController.swift; sourceTree = "<group>"; };
 		6DBD745B25892588007A3178 /* RSTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSTabBarController.swift; sourceTree = "<group>"; };
-		6DD1BE08258A7BA500126B6C /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = ../../../../../../.Trash/TableViewCell.swift; sourceTree = "<group>"; };
-		6DD1BE09258A7BA500126B6C /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TableViewCell.xib; path = ../../../../../../.Trash/TableViewCell.xib; sourceTree = "<group>"; };
-		6DD1BE12258A83C600126B6C /* TableViewRagers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewRagers.swift; path = ../../../../../../.Trash/TableViewRagers.swift; sourceTree = "<group>"; };
 		6DED97292589719200E627CD /* RagersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RagersViewController.swift; sourceTree = "<group>"; };
 		6DED972B258971A200E627CD /* RagersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RagersPresenter.swift; sourceTree = "<group>"; };
 		6DED972D258971B700E627CD /* RagersInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RagersInteractor.swift; sourceTree = "<group>"; };
 		6DED972F258971CA00E627CD /* RagersRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RagersRouter.swift; sourceTree = "<group>"; };
 		6DED9732258971E100E627CD /* RagersModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RagersModels.swift; sourceTree = "<group>"; };
 		6DEF99FA2566DB6600548A97 /* RSTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSTextField.swift; sourceTree = "<group>"; };
+		6DF4069625F7F7990034508A /* TableViewRagers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewRagers.swift; sourceTree = "<group>"; };
+		6DF4069E25F7F7AC0034508A /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		6DF406A325F7F8230034508A /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		6E71E934D23872EAB5ACED6D /* Pods_Rager_Streak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rager_Streak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F41657E45D61CD56D97C5C6 /* Pods_Rager_StreakTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rager_StreakTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5E4A0372AC8FF65EC29A599 /* Pods-Rager Streak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rager Streak.debug.xcconfig"; path = "Target Support Files/Pods-Rager Streak/Pods-Rager Streak.debug.xcconfig"; sourceTree = "<group>"; };
@@ -344,9 +344,9 @@
 		6DD1BE07258A7B8700126B6C /* TableViewRagers */ = {
 			isa = PBXGroup;
 			children = (
-				6DD1BE12258A83C600126B6C /* TableViewRagers.swift */,
-				6DD1BE08258A7BA500126B6C /* TableViewCell.swift */,
-				6DD1BE09258A7BA500126B6C /* TableViewCell.xib */,
+				6DF4069625F7F7990034508A /* TableViewRagers.swift */,
+				6DF4069E25F7F7AC0034508A /* TableViewCell.swift */,
+				6DF406A325F7F8230034508A /* TableViewCell.xib */,
 			);
 			path = TableViewRagers;
 			sourceTree = "<group>";
@@ -491,7 +491,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D0AD9F525598F6A00A6C3A6 /* LaunchScreen.storyboard in Resources */,
-				6DD1BE0E258A7BA500126B6C /* TableViewCell.xib in Resources */,
+				6DF406A425F7F8230034508A /* TableViewCell.xib in Resources */,
 				6D0AD9F225598F6A00A6C3A6 /* Assets.xcassets in Resources */,
 				6D8CD622256311C3008BB608 /* SecondScreen.storyboard in Resources */,
 				6D0AD9F025598F6700A6C3A6 /* Main.storyboard in Resources */,
@@ -602,14 +602,13 @@
 				6DED9733258971E100E627CD /* RagersModels.swift in Sources */,
 				6D26E8D5256863CF00DB6771 /* HomeViewController.swift in Sources */,
 				6D8CD629256313A8008BB608 /* LoginScreenPresenter.swift in Sources */,
-				6DD1BE13258A83C600126B6C /* TableViewRagers.swift in Sources */,
 				6D887D92258BF2EC00354AF3 /* NewRagerInteractor.swift in Sources */,
 				6DEF99FB2566DB6600548A97 /* RSTextField.swift in Sources */,
 				6DBD745C25892588007A3178 /* RSTabBarController.swift in Sources */,
 				6D0ADA1A2559917E00A6C3A6 /* UIColor+Hex.swift in Sources */,
 				6D26E8DE2568642C00DB6771 /* HomeModels.swift in Sources */,
-				6DD1BE0D258A7BA500126B6C /* TableViewCell.swift in Sources */,
 				6D8CD6152562E3B6008BB608 /* FirstScreenViewController.swift in Sources */,
+				6DF4069725F7F7990034508A /* TableViewRagers.swift in Sources */,
 				6D26E8E325686A6000DB6771 /* ImageView+Circle.swift in Sources */,
 				6D4FD4162567003000DBD4A9 /* RSNavigationBar.swift in Sources */,
 				6DB7105B2592702D0003783F /* NewRagerGameViewController.swift in Sources */,
@@ -619,6 +618,7 @@
 				6D26E8D7256863DE00DB6771 /* HomePresenter.swift in Sources */,
 				6DED972C258971A200E627CD /* RagersPresenter.swift in Sources */,
 				6D887D90258BF29100354AF3 /* NewRagerViewController.swift in Sources */,
+				6DF4069F25F7F7AC0034508A /* TableViewCell.swift in Sources */,
 				6D26E8DB256863F600DB6771 /* HomeRouter.swift in Sources */,
 				6DB7105425925C3C0003783F /* RSButton.swift in Sources */,
 				6D8CD6252563138C008BB608 /* LoginScreenViewController.swift in Sources */,
