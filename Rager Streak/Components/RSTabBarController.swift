@@ -17,10 +17,10 @@ class RSTabBarController: UITabBarController, UITabBarControllerDelegate {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        tabBar.frame.size.height = 78
-        tabBar.frame.origin.y = view.frame.height - 76
+        tabBar.frame.size.height = 60
+        tabBar.frame.origin.y = view.frame.height - 60
         tabBar.itemPositioning = .automatic
-        tabBar.itemSpacing =  UIScreen.main.bounds.height / 100
+        tabBar.itemSpacing =  UIScreen.main.bounds.height / 50
         
         
     }

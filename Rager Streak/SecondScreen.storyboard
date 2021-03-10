@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,9 +46,9 @@
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGZ-ff-1Cn" customClass="RSButton" customModule="Rager_Streak" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGZ-ff-1Cn" customClass="RSButton" customModule="Rager_Streak" customModuleProvider="target">
                                 <rect key="frame" x="41.5" y="483.5" width="331" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="U99-Rx-TgJ"/>
@@ -77,6 +78,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Dx4-LB-G7k"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="VGZ-ff-1Cn" firstAttribute="top" secondItem="vTw-Ei-eie" secondAttribute="bottom" constant="25" id="0nn-z1-lGu"/>
@@ -94,7 +96,6 @@
                             <constraint firstItem="Dx4-LB-G7k" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="qJo-s2-g5w" secondAttribute="bottom" constant="121.5" id="rjk-jI-eup"/>
                             <constraint firstItem="vTw-Ei-eie" firstAttribute="top" secondItem="GaT-IL-YKl" secondAttribute="bottom" constant="5" id="vNy-Hw-rqS"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Dx4-LB-G7k"/>
                     </view>
                     <connections>
                         <outlet property="buttonLogin" destination="VGZ-ff-1Cn" id="sq4-Sd-kfN"/>
