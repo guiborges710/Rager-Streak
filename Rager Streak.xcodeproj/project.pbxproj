@@ -43,6 +43,10 @@
 		6D8CD62725631398008BB608 /* LoginScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CD62625631398008BB608 /* LoginScreenInteractor.swift */; };
 		6D8CD629256313A8008BB608 /* LoginScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CD628256313A8008BB608 /* LoginScreenPresenter.swift */; };
 		6D8CD62B256313BA008BB608 /* LoginScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CD62A256313BA008BB608 /* LoginScreenRouter.swift */; };
+		6DB29CE926011FEC00D12E2D /* NewRagerPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB29CE826011FEC00D12E2D /* NewRagerPhotoViewController.swift */; };
+		6DB29CF1260120BA00D12E2D /* NewRagerGameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB29CF0260120BA00D12E2D /* NewRagerGameRouter.swift */; };
+		6DB29CF62601213E00D12E2D /* NewRagerGameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB29CF52601213E00D12E2D /* NewRagerGameInteractor.swift */; };
+		6DB29CFC260126EF00D12E2D /* NewRagerModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB29CFB260126EF00D12E2D /* NewRagerModalViewController.swift */; };
 		6DB7105425925C3C0003783F /* RSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB7105325925C3C0003783F /* RSButton.swift */; };
 		6DB7105B2592702D0003783F /* NewRagerGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB7105A2592702D0003783F /* NewRagerGameViewController.swift */; };
 		6DBD745C25892588007A3178 /* RSTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBD745B25892588007A3178 /* RSTabBarController.swift */; };
@@ -118,6 +122,10 @@
 		6D8CD62625631398008BB608 /* LoginScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenInteractor.swift; sourceTree = "<group>"; };
 		6D8CD628256313A8008BB608 /* LoginScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenPresenter.swift; sourceTree = "<group>"; };
 		6D8CD62A256313BA008BB608 /* LoginScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenRouter.swift; sourceTree = "<group>"; };
+		6DB29CE826011FEC00D12E2D /* NewRagerPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRagerPhotoViewController.swift; sourceTree = "<group>"; };
+		6DB29CF0260120BA00D12E2D /* NewRagerGameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRagerGameRouter.swift; sourceTree = "<group>"; };
+		6DB29CF52601213E00D12E2D /* NewRagerGameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRagerGameInteractor.swift; sourceTree = "<group>"; };
+		6DB29CFB260126EF00D12E2D /* NewRagerModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRagerModalViewController.swift; sourceTree = "<group>"; };
 		6DB7105325925C3C0003783F /* RSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSButton.swift; sourceTree = "<group>"; };
 		6DB7105A2592702D0003783F /* NewRagerGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRagerGameViewController.swift; sourceTree = "<group>"; };
 		6DBD745B25892588007A3178 /* RSTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSTabBarController.swift; sourceTree = "<group>"; };
@@ -204,9 +212,7 @@
 				6D26E8D3256863AE00DB6771 /* Home */,
 				6D8CD6112562E36D008BB608 /* FirstScreen */,
 				6D8CD623256311E8008BB608 /* LoginScreen */,
-				6D8CD6182562EFEA008BB608 /* Models */,
 				6D0ADA18255990F000A6C3A6 /* Resources */,
-				6D4FD4172567087F00DBD4A9 /* Components */,
 				6D0AD9EE25598F6700A6C3A6 /* Main.storyboard */,
 				6D8CD621256311C3008BB608 /* SecondScreen.storyboard */,
 				6D0AD9E825598F6700A6C3A6 /* AppDelegate.swift */,
@@ -239,6 +245,7 @@
 		6D0ADA18255990F000A6C3A6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6D4FD4172567087F00DBD4A9 /* Components */,
 				6D0ADA192559917E00A6C3A6 /* UIColor+Hex.swift */,
 				6D8CD61B2562FACF008BB608 /* UILabel+ChangeText.swift */,
 				6D26E8E225686A6000DB6771 /* ImageView+Circle.swift */,
@@ -294,6 +301,8 @@
 		6D887D8E258BF26800354AF3 /* NewRager */ = {
 			isa = PBXGroup;
 			children = (
+				6DB29CFA260126DC00D12E2D /* NewRagerModal */,
+				6DB29CE426011FA400D12E2D /* NewRagerPhoto */,
 				6DB7105925926FFF0003783F /* NewRagerGame */,
 				6D887D8F258BF29100354AF3 /* NewRagerViewController.swift */,
 				6D887D91258BF2EC00354AF3 /* NewRagerInteractor.swift */,
@@ -306,6 +315,7 @@
 		6D8CD6112562E36D008BB608 /* FirstScreen */ = {
 			isa = PBXGroup;
 			children = (
+				6D8CD6182562EFEA008BB608 /* Models */,
 				6D8CD6142562E3B6008BB608 /* FirstScreenViewController.swift */,
 				6D8CD6122562E392008BB608 /* FirstScreenPresenter.swift */,
 				6D8CD6162562E3DA008BB608 /* FirstScreenInteractor.swift */,
@@ -333,10 +343,28 @@
 			path = LoginScreen;
 			sourceTree = "<group>";
 		};
+		6DB29CE426011FA400D12E2D /* NewRagerPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				6DB29CE826011FEC00D12E2D /* NewRagerPhotoViewController.swift */,
+			);
+			path = NewRagerPhoto;
+			sourceTree = "<group>";
+		};
+		6DB29CFA260126DC00D12E2D /* NewRagerModal */ = {
+			isa = PBXGroup;
+			children = (
+				6DB29CFB260126EF00D12E2D /* NewRagerModalViewController.swift */,
+			);
+			path = NewRagerModal;
+			sourceTree = "<group>";
+		};
 		6DB7105925926FFF0003783F /* NewRagerGame */ = {
 			isa = PBXGroup;
 			children = (
 				6DB7105A2592702D0003783F /* NewRagerGameViewController.swift */,
+				6DB29CF0260120BA00D12E2D /* NewRagerGameRouter.swift */,
+				6DB29CF52601213E00D12E2D /* NewRagerGameInteractor.swift */,
 			);
 			path = NewRagerGame;
 			sourceTree = "<group>";
@@ -594,11 +622,13 @@
 				6D8CD61E25630650008BB608 /* FirstScreenRouter.swift in Sources */,
 				6D4FD419256708D200DBD4A9 /* RSViewController.swift in Sources */,
 				6D887D8A258BA1E600354AF3 /* UIView+Circle.swift in Sources */,
+				6DB29CF1260120BA00D12E2D /* NewRagerGameRouter.swift in Sources */,
 				6D26E8D9256863EB00DB6771 /* HomeInteractor.swift in Sources */,
 				6DED972E258971B700E627CD /* RagersInteractor.swift in Sources */,
 				6D887D94258BF2FE00354AF3 /* NewRagerRouter.swift in Sources */,
 				6D8CD62B256313BA008BB608 /* LoginScreenRouter.swift in Sources */,
 				6D26E8D125685E3D00DB6771 /* RSColor.swift in Sources */,
+				6DB29CFC260126EF00D12E2D /* NewRagerModalViewController.swift in Sources */,
 				6DED9733258971E100E627CD /* RagersModels.swift in Sources */,
 				6D26E8D5256863CF00DB6771 /* HomeViewController.swift in Sources */,
 				6D8CD629256313A8008BB608 /* LoginScreenPresenter.swift in Sources */,
@@ -611,6 +641,7 @@
 				6DF4069725F7F7990034508A /* TableViewRagers.swift in Sources */,
 				6D26E8E325686A6000DB6771 /* ImageView+Circle.swift in Sources */,
 				6D4FD4162567003000DBD4A9 /* RSNavigationBar.swift in Sources */,
+				6DB29CF62601213E00D12E2D /* NewRagerGameInteractor.swift in Sources */,
 				6DB7105B2592702D0003783F /* NewRagerGameViewController.swift in Sources */,
 				6D8CD61A2562F004008BB608 /* FirstScreenModels.swift in Sources */,
 				6D8CD6132562E392008BB608 /* FirstScreenPresenter.swift in Sources */,
@@ -625,6 +656,7 @@
 				6D8CD6172562E3DA008BB608 /* FirstScreenInteractor.swift in Sources */,
 				6D0AD9EB25598F6700A6C3A6 /* SceneDelegate.swift in Sources */,
 				6DED9730258971CA00E627CD /* RagersRouter.swift in Sources */,
+				6DB29CE926011FEC00D12E2D /* NewRagerPhotoViewController.swift in Sources */,
 				6D8CD61C2562FACF008BB608 /* UILabel+ChangeText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

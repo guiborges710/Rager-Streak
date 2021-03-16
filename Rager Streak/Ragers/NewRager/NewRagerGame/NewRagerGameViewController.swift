@@ -19,8 +19,8 @@ protocol NewRagerGameDisplayLogic: class
 
 class NewRagerGameViewController: UIViewController, NewRagerGameDisplayLogic
 {
-//  var interactor: NewRagerGameBusinessLogic?
-//  var router: (NSObjectProtocol & NewRagerGameRoutingLogic & NewRagerGameDataPassing)?
+  var interactor: NewRagerGameBusinessLogic?
+  var router: (NSObjectProtocol & NewRagerGameRoutingLogic & NewRagerGameDataPassing)?
 
   // MARK: Object lifecycle
   
@@ -40,16 +40,16 @@ class NewRagerGameViewController: UIViewController, NewRagerGameDisplayLogic
   
   private func setup()
   {
-//    let viewController = self
-//    let interactor = NewRagerGameInteractor()
+    let viewController = self
+    let interactor = NewRagerGameInteractor()
 //    let presenter = NewRagerGamePresenter()
-//    let router = NewRagerGameRouter()
-//    viewController.interactor = interactor
-//    viewController.router = router
+    let router = NewRagerGameRouter()
+    viewController.interactor = interactor
+    viewController.router = router
 //    interactor.presenter = presenter
 //    presenter.viewController = viewController
-//    router.viewController = viewController
-//    router.dataStore = interactor
+    router.viewController = viewController
+    router.dataStore = interactor
   }
   
   // MARK: Routing
@@ -59,20 +59,17 @@ class NewRagerGameViewController: UIViewController, NewRagerGameDisplayLogic
   override func viewDidLoad()
   {
     super.viewDidLoad()
-    doSomething()
+    
     setupNavBar()
     self.title = "Novo Rager"
   }
   
   // MARK: Do something
   
-  //@IBOutlet weak var nameTextField: UITextField!
-  
-  func doSomething()
-  {
+    @IBAction func routeToNewRagerPhoto(_ sender: Any) {
+        router?.routeToNewRagerPhoto()
+    }
     
-  }
-
 }
 extension NewRagerGameViewController {
     func setupNavBar() {

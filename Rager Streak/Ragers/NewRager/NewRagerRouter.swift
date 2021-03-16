@@ -32,4 +32,6 @@ class NewRagerRouter: NSObject, NewRagerRoutingLogic, NewRagerDataPassing
         let destination: NewRagerGameViewController = UIStoryboard(name: "NewRager", bundle: nil).instantiateViewController(withIdentifier: "NewRagerGameViewController") as! NewRagerGameViewController
         viewController?.navigationController?.pushViewController(destination, animated: true)
     }
+    
+    
 }

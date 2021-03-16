@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,7 +37,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dt-fr-fef" customClass="RSButton" customModule="Rager_Streak" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dt-fr-fef" customClass="RSButton" customModule="Rager_Streak" customModuleProvider="target">
                                 <rect key="frame" x="41.5" y="769" width="331" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="331" id="4eo-fZ-TfH"/>
@@ -51,6 +52,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="GNz-A6-30d"/>
                         <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="IGG-ff-vsX" firstAttribute="centerX" secondItem="RUJ-6B-2bB" secondAttribute="centerX" id="XIb-YV-zmX"/>
@@ -60,7 +62,6 @@
                             <constraint firstItem="yLw-iR-z52" firstAttribute="centerX" secondItem="RUJ-6B-2bB" secondAttribute="centerX" id="lVh-Zz-NVX"/>
                             <constraint firstItem="IGG-ff-vsX" firstAttribute="top" secondItem="yLw-iR-z52" secondAttribute="bottom" constant="10" id="vnn-jG-gHT"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="GNz-A6-30d"/>
                     </view>
                     <connections>
                         <outlet property="inputName" destination="IGG-ff-vsX" id="nVK-Vx-V8x"/>
@@ -100,7 +101,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHO-na-Jo3" customClass="RSButton" customModule="Rager_Streak" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHO-na-Jo3" customClass="RSButton" customModule="Rager_Streak" customModuleProvider="target">
                                 <rect key="frame" x="41.5" y="769" width="331" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="9BX-Ib-Uzl"/>
@@ -111,10 +112,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="nextScreen:" destination="pKt-AO-5gA" eventType="touchUpInside" id="Yho-Ei-eo6"/>
+                                    <action selector="routeToNewRagerPhoto:" destination="pKt-AO-5gA" eventType="touchUpInside" id="zAX-h6-Vv4"/>
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="uyE-m5-y1Z"/>
                         <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="iHO-na-Jo3" firstAttribute="centerX" secondItem="1vu-cv-m6f" secondAttribute="centerX" id="Ckw-Sa-oUe"/>
@@ -124,12 +126,165 @@
                             <constraint firstItem="6KI-BC-ac6" firstAttribute="top" secondItem="uyE-m5-y1Z" secondAttribute="top" constant="320" id="qgn-jE-TDh"/>
                             <constraint firstItem="CsF-xi-NwU" firstAttribute="centerX" secondItem="1vu-cv-m6f" secondAttribute="centerX" id="sAl-AL-JNt"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="uyE-m5-y1Z"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1sg-md-6wt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="709" y="62"/>
         </scene>
+        <!--New Rager Photo View Controller-->
+        <scene sceneID="Clo-nV-0LH">
+            <objects>
+                <viewController storyboardIdentifier="NewRagerPhotoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4gF-2C-a3m" customClass="NewRagerPhotoViewController" customModule="Rager_Streak" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UJQ-yv-I1N">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIx-YV-CBL" customClass="RSButton" customModule="Rager_Streak" customModuleProvider="target">
+                                <rect key="frame" x="41.5" y="769" width="331" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="PdX-dC-HyS"/>
+                                    <constraint firstAttribute="width" constant="331" id="pWU-k0-qRi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Continuar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextScreen:" destination="4gF-2C-a3m" eventType="touchUpInside" id="hfL-os-RPu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carregar foto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVL-js-Jhv">
+                                <rect key="frame" x="144" y="468" width="126" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1h-T4-cWw">
+                                <rect key="frame" x="107" y="244" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="61x-7B-Tct"/>
+                                    <constraint firstAttribute="height" constant="200" id="C6v-UU-sOG"/>
+                                </constraints>
+                                <state key="normal" image="addPhoto"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQP-z4-232">
+                                <rect key="frame" x="127.5" y="719" width="159" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Quero pular essa etapa">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="showModalConfirm:" destination="4gF-2C-a3m" eventType="touchUpInside" id="e5m-yt-5pT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CB0-n8-k0F"/>
+                        <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="cIx-YV-CBL" firstAttribute="centerX" secondItem="UJQ-yv-I1N" secondAttribute="centerX" id="3fV-aB-5ep"/>
+                            <constraint firstItem="w1h-T4-cWw" firstAttribute="top" secondItem="CB0-n8-k0F" secondAttribute="top" constant="200" id="66J-xz-jep"/>
+                            <constraint firstItem="CVL-js-Jhv" firstAttribute="centerX" secondItem="UJQ-yv-I1N" secondAttribute="centerX" id="E6T-IZ-sYk"/>
+                            <constraint firstItem="w1h-T4-cWw" firstAttribute="centerX" secondItem="UJQ-yv-I1N" secondAttribute="centerX" id="GNX-kA-XKm"/>
+                            <constraint firstItem="eQP-z4-232" firstAttribute="centerX" secondItem="UJQ-yv-I1N" secondAttribute="centerX" id="PKh-ut-6sj"/>
+                            <constraint firstItem="CB0-n8-k0F" firstAttribute="bottom" secondItem="cIx-YV-CBL" secondAttribute="bottom" constant="40" id="d0c-md-dnd"/>
+                            <constraint firstItem="CVL-js-Jhv" firstAttribute="top" secondItem="w1h-T4-cWw" secondAttribute="bottom" constant="24" id="hxj-w7-DP6"/>
+                            <constraint firstItem="cIx-YV-CBL" firstAttribute="top" secondItem="eQP-z4-232" secondAttribute="bottom" constant="20" id="yE5-u2-68o"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="37z-bT-oUR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1534.7826086956522" y="61.607142857142854"/>
+        </scene>
+        <!--New Rager Modal View Controller-->
+        <scene sceneID="9oi-HC-51Q">
+            <objects>
+                <viewController storyboardIdentifier="NewRagerModalViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="a3H-Ku-XHK" customClass="NewRagerModalViewController" customModule="Rager_Streak" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lcS-ut-ec0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Gr-Qh-RSP">
+                                <rect key="frame" x="41" y="293.5" width="332" height="309"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLe-7c-jTC">
+                                        <rect key="frame" x="126" y="277" width="80" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12" id="Job-dV-Esx"/>
+                                            <constraint firstAttribute="width" constant="80" id="QLH-nd-jYd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Ainda não">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="notYet:" destination="a3H-Ku-XHK" eventType="touchUpInside" id="yPp-P3-x9e"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXp-Xl-48r">
+                                        <rect key="frame" x="75" y="208" width="182" height="45"/>
+                                        <color key="backgroundColor" red="0.47843137250000001" green="0.30196078430000001" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="Y4W-3O-sVF"/>
+                                            <constraint firstAttribute="width" constant="182" id="Z7R-vo-tb5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Cadastrar Rages">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alert" translatesAutoresizingMaskIntoConstraints="NO" id="DLm-px-SUy">
+                                        <rect key="frame" x="122.5" y="24" width="87" height="87"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="87" id="1Vb-to-zkV"/>
+                                            <constraint firstAttribute="width" constant="87" id="PTI-WF-afx"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você deseja cadastrar os rages desse usuário?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQm-xL-HHs">
+                                        <rect key="frame" x="42" y="135" width="248" height="49"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="248" id="Tge-ef-luZ"/>
+                                            <constraint firstAttribute="height" constant="49" id="uDM-7j-9gg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="332" id="3iE-MM-Q3U"/>
+                                    <constraint firstAttribute="height" constant="309" id="5la-K6-jQZ"/>
+                                    <constraint firstItem="SXp-Xl-48r" firstAttribute="centerX" secondItem="5Gr-Qh-RSP" secondAttribute="centerX" id="5z4-IY-wjr"/>
+                                    <constraint firstItem="GQm-xL-HHs" firstAttribute="centerX" secondItem="5Gr-Qh-RSP" secondAttribute="centerX" id="A9P-KV-5rD"/>
+                                    <constraint firstItem="DLm-px-SUy" firstAttribute="top" secondItem="5Gr-Qh-RSP" secondAttribute="top" constant="24" id="In7-iv-GRV"/>
+                                    <constraint firstItem="tLe-7c-jTC" firstAttribute="top" secondItem="SXp-Xl-48r" secondAttribute="bottom" constant="24" id="YKd-6e-nqG"/>
+                                    <constraint firstItem="GQm-xL-HHs" firstAttribute="top" secondItem="DLm-px-SUy" secondAttribute="bottom" constant="24" id="cVt-UO-FeT"/>
+                                    <constraint firstItem="SXp-Xl-48r" firstAttribute="top" secondItem="GQm-xL-HHs" secondAttribute="bottom" constant="24" id="gOn-Yq-vTM"/>
+                                    <constraint firstItem="tLe-7c-jTC" firstAttribute="centerX" secondItem="5Gr-Qh-RSP" secondAttribute="centerX" id="gW7-mr-zLR"/>
+                                    <constraint firstItem="DLm-px-SUy" firstAttribute="centerX" secondItem="5Gr-Qh-RSP" secondAttribute="centerX" id="iHd-I9-SYU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ptH-WC-X1S"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.30207416373239437" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5Gr-Qh-RSP" firstAttribute="centerY" secondItem="lcS-ut-ec0" secondAttribute="centerY" id="c88-3X-QrS"/>
+                            <constraint firstItem="5Gr-Qh-RSP" firstAttribute="centerX" secondItem="lcS-ut-ec0" secondAttribute="centerX" id="hiQ-W9-4Yd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="modalView" destination="5Gr-Qh-RSP" id="uVW-9S-ouM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LXq-dz-DR7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2417.3913043478265" y="61.607142857142854"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="addPhoto" width="200" height="200"/>
+        <image name="alert" width="87" height="87"/>
+    </resources>
 </document>

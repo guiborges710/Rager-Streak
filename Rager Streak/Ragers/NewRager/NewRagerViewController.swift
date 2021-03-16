@@ -76,5 +76,7 @@ extension NewRagerViewController {
     func setupNavBar() {
         self.navigationItem.leftBarButtonItem = self.navigationController?.setupLeftButtonNavBar()
     }
+    
+    
 }
 
