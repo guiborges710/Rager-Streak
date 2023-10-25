@@ -20,7 +20,6 @@
 		6D0ADA1A2559917E00A6C3A6 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0ADA192559917E00A6C3A6 /* UIColor+Hex.swift */; };
 		6D26E8D125685E3D00DB6771 /* RSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D26E8D025685E3D00DB6771 /* RSColor.swift */; };
 		6D26E8D5256863CF00DB6771 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D26E8D4256863CF00DB6771 /* HomeViewController.swift */; };
-		6D26E8D7256863DE00DB6771 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D26E8D6256863DE00DB6771 /* HomePresenter.swift */; };
 		6D26E8D9256863EB00DB6771 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D26E8D8256863EA00DB6771 /* HomeInteractor.swift */; };
 		6D26E8DB256863F600DB6771 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D26E8DA256863F600DB6771 /* HomeRouter.swift */; };
 		6D26E8DE2568642C00DB6771 /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D26E8DD2568642C00DB6771 /* HomeModels.swift */; };
@@ -59,6 +58,7 @@
 		6DF4069725F7F7990034508A /* TableViewRagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4069625F7F7990034508A /* TableViewRagers.swift */; };
 		6DF4069F25F7F7AC0034508A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4069E25F7F7AC0034508A /* TableViewCell.swift */; };
 		6DF406A425F7F8230034508A /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DF406A325F7F8230034508A /* TableViewCell.xib */; };
+		BA69DAAE2AE977A900984D5B /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA69DAAD2AE977A900984D5B /* HomePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,7 +99,6 @@
 		6D0ADA192559917E00A6C3A6 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		6D26E8D025685E3D00DB6771 /* RSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSColor.swift; sourceTree = "<group>"; };
 		6D26E8D4256863CF00DB6771 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		6D26E8D6256863DE00DB6771 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomePresenter.swift; path = "/Users/guiulherme.martinelli/Documents/Rager-Streak/Rager Streak/Rager Streak/Home/HomePresenter.swift"; sourceTree = "<absolute>"; };
 		6D26E8D8256863EA00DB6771 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		6D26E8DA256863F600DB6771 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		6D26E8DD2568642C00DB6771 /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
@@ -140,6 +139,7 @@
 		6DF406A325F7F8230034508A /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		6E71E934D23872EAB5ACED6D /* Pods_Rager_Streak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rager_Streak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F41657E45D61CD56D97C5C6 /* Pods_Rager_StreakTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rager_StreakTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA69DAAD2AE977A900984D5B /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomePresenter.swift; path = Models/HomePresenter.swift; sourceTree = "<group>"; };
 		D5E4A0372AC8FF65EC29A599 /* Pods-Rager Streak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rager Streak.debug.xcconfig"; path = "Target Support Files/Pods-Rager Streak/Pods-Rager Streak.debug.xcconfig"; sourceTree = "<group>"; };
 		EE67317903D9FA5E71550CDA /* Pods_Rager_Streak_Rager_StreakUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rager_Streak_Rager_StreakUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC827A8239961AC191B00A8A /* Pods-Rager StreakTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rager StreakTests.debug.xcconfig"; path = "Target Support Files/Pods-Rager StreakTests/Pods-Rager StreakTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -258,8 +258,8 @@
 			isa = PBXGroup;
 			children = (
 				6D26E8DC2568641300DB6771 /* Models */,
-				6D26E8D6256863DE00DB6771 /* HomePresenter.swift */,
 				6D26E8D4256863CF00DB6771 /* HomeViewController.swift */,
+				BA69DAAD2AE977A900984D5B /* HomePresenter.swift */,
 				6D26E8D8256863EA00DB6771 /* HomeInteractor.swift */,
 				6D26E8DA256863F600DB6771 /* HomeRouter.swift */,
 			);
@@ -645,8 +645,8 @@
 				6DB7105B2592702D0003783F /* NewRagerGameViewController.swift in Sources */,
 				6D8CD61A2562F004008BB608 /* FirstScreenModels.swift in Sources */,
 				6D8CD6132562E392008BB608 /* FirstScreenPresenter.swift in Sources */,
+				BA69DAAE2AE977A900984D5B /* HomePresenter.swift in Sources */,
 				6D0AD9E925598F6700A6C3A6 /* AppDelegate.swift in Sources */,
-				6D26E8D7256863DE00DB6771 /* HomePresenter.swift in Sources */,
 				6DED972C258971A200E627CD /* RagersPresenter.swift in Sources */,
 				6D887D90258BF29100354AF3 /* NewRagerViewController.swift in Sources */,
 				6DF4069F25F7F7AC0034508A /* TableViewCell.swift in Sources */,
